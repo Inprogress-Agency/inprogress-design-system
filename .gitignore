@@ -1,0 +1,18 @@
+# Dependencies
+node_modules/
+.cache/
+dist/
+
+# Storybook
+storybook-static/
+.storybook/node_modules/
+
+# Logs
+*.log
+
+# System Files
+.DS_Store
+Thumbs.db
+
+# Build files
+build/ 
