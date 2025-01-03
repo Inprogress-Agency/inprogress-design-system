@@ -14,8 +14,12 @@ const config: StorybookConfig = {
         "react-native$": "react-native-web",
       };
     }
+    if (config.output) {
+      config.output.publicPath = "/design-system/";
+    }
     return config;
   },
+  staticDirs: ["../public"],
 };
 
 export default config;
