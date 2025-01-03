@@ -15,7 +15,7 @@ const config: StorybookConfig = {
       };
     }
     if (config.output) {
-      config.output.publicPath = "/design-system/";
+      config.output.publicPath = "./";
     }
     return config;
   },

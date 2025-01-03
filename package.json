@@ -1,5 +1,6 @@
 {
   "name": "design-system",
+  "homepage": "https://paulthiberville.github.io/design-system",
   "version": "0.0.3",
   "main": "dist/index.js",
   "files": [
