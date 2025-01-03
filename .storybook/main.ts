@@ -6,13 +6,7 @@ const config: StorybookConfig = {
     options: {},
   },
   stories: ["./stories/**/*.stories.?(ts|tsx|js|jsx)"],
-  addons: [
-    "@storybook/addon-essentials",
-    // "@storybook/addon-ondevice-controls",
-    // "@storybook/addon-ondevice-actions",
-    // "@storybook/addon-webpack5-compiler-babel",
-    // "@chromatic-com/storybook",
-  ],
+  addons: ["@storybook/addon-essentials"],
   webpackFinal: async (config) => {
     if (config.resolve) {
       config.resolve.alias = {
