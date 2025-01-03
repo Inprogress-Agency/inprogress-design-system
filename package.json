@@ -1,0 +1,50 @@
+{
+  "name": "design-system",
+  "version": "0.0.3",
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "react-native": "^0.76.5"
+  },
+  "devDependencies": {
+    "@babel/core": "7.26.0",
+    "@babel/plugin-transform-react-jsx": "^7.25.9",
+    "@babel/preset-react": "^7.22.0",
+    "@babel/preset-typescript": "^7.22.0",
+    "@chromatic-com/storybook": "3",
+    "@gorhom/bottom-sheet": "5.0.6",
+    "@react-native-async-storage/async-storage": "2.1.0",
+    "@react-native-community/cli": "latest",
+    "@react-native-community/datetimepicker": "8.2.0",
+    "@react-native-community/slider": "4.5.5",
+    "@react-native/metro-config": "^0.76.5",
+    "@storybook/addon-essentials": "^8.4.7",
+    "@storybook/addon-ondevice-actions": "8.4.4",
+    "@storybook/addon-ondevice-controls": "8.4.4",
+    "@storybook/addon-webpack5-compiler-babel": "3.0.5",
+    "@storybook/cli": "^8.4.7",
+    "@storybook/core-common": "^8.4.7",
+    "@storybook/react": "^8.4.7",
+    "@storybook/react-native": "^8.4.4",
+    "@storybook/react-webpack5": "^8.4.7",
+    "babel-loader": "^9.2.1",
+    "metro-react-native-babel-preset": "^0.77.0",
+    "react-native-gesture-handler": "2.21.2",
+    "react-native-reanimated": "3.16.6",
+    "react-native-safe-area-context": "5.0.0",
+    "react-native-svg": "15.10.1",
+    "react-native-svg-transformer": "^1.5.0",
+    "react-native-web": "^0.19.13",
+    "storybook": "^8.4.7",
+    "typescript": "^5.7.2"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "react-native start",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
+  }
+}
