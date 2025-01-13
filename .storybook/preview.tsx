@@ -1,5 +1,6 @@
 import React from "react";
-import { View } from 'react-native';
+import { View } from "react-native";
+import theme from "./theme";
 
 export const decorators = [
   (Story) => (
@@ -16,5 +17,8 @@ export const parameters = {
       color: /(background|color)$/i,
       date: /Date$/,
     },
+  },
+  docs: {
+    theme: theme,
   },
 };

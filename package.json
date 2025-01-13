@@ -8,6 +8,8 @@
   ],
   "license": "MIT",
   "dependencies": {
+    "@storybook/manager-api": "^8.4.7",
+    "@storybook/theming": "^8.4.7",
     "react-native": "^0.76.5"
   },
   "devDependencies": {

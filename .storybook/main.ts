@@ -5,7 +5,10 @@ const config: StorybookConfig = {
     name: "@storybook/react-webpack5",
     options: {},
   },
-  stories: ["./stories/**/*.stories.?(ts|tsx|js|jsx)"],
+  stories: [
+    "./docs/introduction.mdx",
+    "./stories/**/*.stories.?(ts|tsx|js|jsx)",
+  ],
   addons: ["@storybook/addon-essentials"],
   webpackFinal: async (config) => {
     if (config.resolve) {
