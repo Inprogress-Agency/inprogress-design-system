@@ -43,9 +43,9 @@
     "typescript": "^5.7.2"
   },
   "scripts": {
-    "build": "tsc",
+    "build": "npx storybook build",
     "start": "react-native start",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "yarn build && yarn storybook"
   }
 }

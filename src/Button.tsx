@@ -1,9 +1,15 @@
 import { TouchableOpacity, Text, StyleSheet } from "react-native";
 
+type ButtonVariant = "primary" | "secondary";
 interface ButtonProps {
+  /** Text à afficher sur le bouton */
   title: string;
+  /** La fonction à appeler lors du clic sur le bouton */
   onPress?: () => void;
-  variant?: "primary" | "secondary";
+  /** Le style visuel du bouton
+   * @default primary
+   */
+  variant: ButtonVariant;
 }
 
 const styles = StyleSheet.create({

@@ -12,14 +12,32 @@ const config: StorybookConfig = {
       config.resolve.alias = {
         ...config.resolve.alias,
         "react-native$": "react-native-web",
+        "react-native-web": "react-native-web",
       };
-    }
-    if (config.output) {
-      config.output.publicPath = "./";
+      config.resolve.extensions = [
+        ".web.js",
+        ".js",
+        ".web.tsx",
+        ".tsx",
+        ".web.ts",
+        ".ts",
+      ];
     }
     return config;
   },
   staticDirs: ["../public"],
+  docs: {
+    autodocs: true,
+  },
+  typescript: {
+    check: false,
+    reactDocgen: "react-docgen-typescript",
+    reactDocgenTypescriptOptions: {
+      shouldExtractLiteralValuesFromEnum: true,
+      propFilter: (prop) =>
+        prop.parent ? !/node_modules/.test(prop.parent.fileName) : true,
+    },
+  },
 };
 
 export default config;
