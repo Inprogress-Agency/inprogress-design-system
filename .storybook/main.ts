@@ -26,6 +26,14 @@ const config: StorybookConfig = {
         ".ts",
       ];
     }
+
+    if (process.env.NODE_ENV === "production") {
+      config.output = {
+        ...config.output,
+        publicPath: "./",
+      };
+    }
+
     return config;
   },
   staticDirs: ["../public"],
