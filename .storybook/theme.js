@@ -3,7 +3,7 @@ import { create } from "@storybook/theming";
 export default create({
   base: "light",
   // Typography
-  fontBase: '"Open Sans", sans-serif',
+  fontBase: "Poppins, sans-serif",
   fontCode: "monospace",
 
   brandTitle: "InProgress",
@@ -13,28 +13,28 @@ export default create({
 
   //
   colorPrimary: "#5E43FF",
-  colorSecondary: "#585C6D",
+  colorSecondary: "#5E43FF",
 
   // UI
-  appBg: "#ffffff",
+  appBg: "#F4F4F4",
   appContentBg: "#ffffff",
   appPreviewBg: "#ffffff",
-  appBorderColor: "#585C6D",
+  appBorderColor: "#8E8E95",
   appBorderRadius: 4,
 
   // Text colors
-  textColor: "#10162F",
+  textColor: "#212121",
   textInverseColor: "#ffffff",
 
   // Toolbar default and active colors
-  barTextColor: "#9E9E9E",
-  barSelectedColor: "#585C6D",
-  barHoverColor: "#585C6D",
-  barBg: "#ffffff",
+  barTextColor: "#8E8E95",
+  barSelectedColor: "#5E43FF",
+  barHoverColor: "#2f217a",
+  barBg: "#F4F4F4",
 
   // Form colors
   inputBg: "#ffffff",
-  inputBorder: "#10162F",
-  inputTextColor: "#10162F",
-  inputBorderRadius: 2,
+  inputBorder: "#8E8E95",
+  inputTextColor: "#212121",
+  inputBorderRadius: 4,
 });
