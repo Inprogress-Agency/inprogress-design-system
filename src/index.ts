@@ -1,2 +1,1 @@
-export { default as Button } from "./Button";
-// Exportez ici vos autres composants
+export * as Buttons from "./Buttons";
