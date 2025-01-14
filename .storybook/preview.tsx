@@ -1,12 +1,13 @@
 import React from "react";
-import { View } from "react-native";
-import theme from "./theme";
+import storybookTheme from "./storybookTheme";
+import { ThemeProvider } from "styled-components/native";
+import theme from "../utils/Theme";
 
 export const decorators = [
   (Story) => (
-    <View style={{ padding: 16 }}>
+    <ThemeProvider theme={theme}>
       <Story />
-    </View>
+    </ThemeProvider>
   ),
 ];
 
@@ -19,6 +20,6 @@ export const parameters = {
     },
   },
   docs: {
-    theme: theme,
+    theme: storybookTheme,
   },
 };

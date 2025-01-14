@@ -1,4 +1,5 @@
-import { TouchableOpacity, Text, StyleSheet } from "react-native";
+import { TouchableOpacity, Text } from "react-native";
+import styled, { css } from "styled-components/native";
 
 type ButtonVariant = "primary" | "secondary";
 interface ButtonProps {
@@ -12,40 +13,39 @@ interface ButtonProps {
   variant: ButtonVariant;
 }
 
-const styles = StyleSheet.create({
-  button: {
-    primary: {
-      backgroundColor: "#007AFF",
-      padding: 12,
-      borderRadius: 8,
-    },
-    secondary: {
-      backgroundColor: "#FFFFFF",
-      padding: 12,
-      borderRadius: 8,
-      borderWidth: 1,
-      borderColor: "#007AFF",
-    },
-  },
-  text: {
-    primary: {
-      color: "#FFFFFF",
-      textAlign: "center",
-      fontSize: 16,
-    },
-    secondary: {
-      color: "#007AFF",
-      textAlign: "center",
-      fontSize: 16,
-    },
-  },
-});
+// Définir le type pour les props du composant styled
+interface StyledButtonProps {
+  variant: ButtonVariant;
+  theme: any; // Idéalement, définissez un type plus précis pour votre thème
+}
+
+const ButtonTouchableOpacity = styled(TouchableOpacity)<{
+  variant: ButtonVariant;
+}>`
+  ${({ theme, variant }: StyledButtonProps) => css`
+    background-color: ${variant === "primary"
+      ? theme.colors.primary
+      : theme.colors.white};
+    padding: 12px;
+    border-radius: 8px;
+    border-width: 1px;
+    border-color: ${theme.colors.primary};
+  `}
+`;
+
+const ButtonText = styled(Text)<{ variant: ButtonVariant }>`
+  ${({ theme, variant }: StyledButtonProps) => css`
+    color: ${variant === "primary" ? theme.colors.white : theme.colors.primary};
+    text-align: center;
+    font-size: 16px;
+  `}
+`;
 
 const Button = ({ title, onPress, variant = "primary" }: ButtonProps) => {
   return (
-    <TouchableOpacity style={styles.button[variant]} onPress={onPress}>
-      <Text style={styles.text[variant]}>{title}</Text>
-    </TouchableOpacity>
+    <ButtonTouchableOpacity onPress={onPress} variant={variant}>
+      <ButtonText variant={variant}>{title}</ButtonText>
+    </ButtonTouchableOpacity>
   );
 };
 
