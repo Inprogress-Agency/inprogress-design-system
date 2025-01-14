@@ -1,7 +1,7 @@
 import { Colors, Theme } from './Theme.types'
 
 export const lightColors: Colors = {
-  primary: '#7ACB8B',
+  primary: '#5E43FF',
   secondary: '#F4F4F4',
   tertiary: '#FFFFFF',
   white: '#FFFFFF',
@@ -17,7 +17,7 @@ export const lightColors: Colors = {
 }
 
 export const darkColors: Colors = {
-  primary: '#7ACB8B',
+  primary: '#5E43FF',
   secondary: '#2e3745',
   tertiary: '#1b212a',
   white: '#1b212a',
