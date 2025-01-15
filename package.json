@@ -46,6 +46,7 @@
   "scripts": {
     "build": "tsc",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "svgr": "npx @svgr/cli --native --out-dir src/assets/icons/components --replace-attr-values \"#212121={props.color || theme?.colors?.black || '#212121'}\" src/assets/icons/icons && node src/assets/icons/parser.js && npx prettier --write src/assets/icons/components"
   }
 }

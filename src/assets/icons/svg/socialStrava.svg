@@ -1,0 +1,24 @@
+<svg
+   viewBox="0 0 0.2048 0.2048"
+   width="32"
+   height="32"
+   xmlns="http://www.w3.org/2000/svg">
+  <path
+     d="M 0.0128,0.0128 H 0.192 V 0.192 H 0.0128 Z"
+     fill="#fc4c02"
+     id="path1866"
+     style="stroke-width:0.0112" />
+  <g
+     fill="#ffffff"
+     fill-rule="evenodd"
+     id="g1872"
+     transform="matrix(0.0112,0,0,0.0112,0.0128,0.0128)">
+    <path
+       d="m 6.9,8.8 2.5,4.5 2.4,-4.5 h -1.5 l -0.9,1.7 -1,-1.7 z"
+       opacity="0.6"
+       id="path1868" />
+    <path
+       d="m 7.2,2.5 3.1,6.3 H 4 Z m 0,3.8 1.2,2.5 H 5.9 Z"
+       id="path1870" />
+  </g>
+</svg>
