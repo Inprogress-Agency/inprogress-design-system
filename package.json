@@ -1,28 +1,26 @@
 {
   "name": "design-system",
   "homepage": "https://paulthiberville.github.io/design-system",
-  "version": "0.0.3",
+  "version": "0.0.8",
   "main": "dist/index.js",
   "files": [
-    "dist"
+    "dist",
+    "dist/**/*"
   ],
   "license": "MIT",
-  "dependencies": {
-    "@storybook/manager-api": "^8.4.7",
-    "@storybook/theming": "^8.4.7",
-    "react-native": "^0.76.5"
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "react-native": "^0.72.4"
   },
   "devDependencies": {
+    "@storybook/manager-api": "^8.4.7",
+    "@storybook/theming": "^8.4.7",
     "@babel/core": "7.26.0",
     "@babel/plugin-transform-react-jsx": "^7.25.9",
     "@babel/preset-react": "^7.22.0",
     "@babel/preset-typescript": "^7.22.0",
-    "@chromatic-com/storybook": "3",
-    "@gorhom/bottom-sheet": "5.0.6",
     "@react-native-async-storage/async-storage": "2.1.0",
     "@react-native-community/cli": "latest",
-    "@react-native-community/datetimepicker": "8.2.0",
-    "@react-native-community/slider": "4.5.5",
     "@react-native/metro-config": "^0.76.5",
     "@reduxjs/toolkit": "^2.5.0",
     "@storybook/addon-essentials": "^8.4.7",
@@ -39,11 +37,6 @@
     "babel-loader": "^9.2.1",
     "metro-react-native-babel-preset": "^0.77.0",
     "prettier": "^3.4.2",
-    "react-native-gesture-handler": "2.21.2",
-    "react-native-reanimated": "3.16.6",
-    "react-native-safe-area-context": "5.0.0",
-    "react-native-svg": "15.10.1",
-    "react-native-svg-transformer": "^1.5.0",
     "react-native-web": "^0.19.13",
     "react-redux": "^9.2.0",
     "storybook": "^8.4.7",
@@ -52,10 +45,7 @@
   },
   "scripts": {
     "build": "tsc",
-    "start": "react-native start",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build",
-    "build-dev": "npx storybook build",
-    "dev": "yarn build-dev && yarn storybook"
+    "build-storybook": "storybook build"
   }
 }

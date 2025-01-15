@@ -4,9 +4,7 @@ import styled, { css } from 'styled-components/native'
 
 export const StyledButton = styled(TouchableOpacity)<StyledButtonProps>`
   ${({ theme, variant }: StyledButtonProps) => css`
-    background-color: ${variant === 'primary'
-      ? theme.colors.primary
-      : theme.colors.white};
+    background-color: ${variant === 'primary' ? theme.colors.primary : theme.colors.white};
     padding: 12px;
     border-radius: 8px;
     border-width: 1px;
