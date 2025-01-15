@@ -5,7 +5,7 @@ export const lightColors: Colors = {
   secondary: '#F4F4F4',
   tertiary: '#FFFFFF',
   white: '#FFFFFF',
-  black: '#212121',
+  black: '#FF0000',
   grey1: '#F4F4F4',
   grey2: '#8E8E95',
   grey3: '#3C3F42',

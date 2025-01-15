@@ -1,20 +1,41 @@
 {
   "name": "design-system",
+  "version": "0.0.18",
   "homepage": "https://paulthiberville.github.io/design-system",
-  "version": "0.0.8",
+  "license": "MIT",
   "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "paths": {
+    "@/Hooks": "./src/utils/Hooks"
+  },
   "files": [
     "dist",
     "dist/**/*"
   ],
-  "license": "MIT",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.js",
+      "default": "./dist/index.js"
+    },
+    "./buttons": {
+      "import": "./dist/buttons/index.js",
+      "require": "./dist/buttons/index.js",
+      "default": "./dist/buttons/index.js"
+    }
+  },
+  "react-native": {
+    ".": "./dist/index.js",
+    "./buttons": "./dist/buttons/index.js"
+  },
+  "dependencies": {
+    "react-native-svg": "^13.6.0"
+  },
   "peerDependencies": {
     "react": "^18.2.0",
     "react-native": "^0.72.4"
   },
   "devDependencies": {
-    "@storybook/manager-api": "^8.4.7",
-    "@storybook/theming": "^8.4.7",
     "@babel/core": "7.26.0",
     "@babel/plugin-transform-react-jsx": "^7.25.9",
     "@babel/preset-react": "^7.22.0",
@@ -29,9 +50,12 @@
     "@storybook/addon-webpack5-compiler-babel": "3.0.5",
     "@storybook/cli": "^8.4.7",
     "@storybook/core-common": "^8.4.7",
+    "@storybook/manager-api": "^8.4.7",
     "@storybook/react": "^8.4.7",
     "@storybook/react-native": "^8.4.4",
     "@storybook/react-webpack5": "^8.4.7",
+    "@storybook/theming": "^8.4.7",
+    "@svgr/cli": "^5.5.0",
     "@types/styled-components": "^5.1.34",
     "@types/styled-components-react-native": "^5.2.5",
     "babel-loader": "^9.2.1",
@@ -39,13 +63,15 @@
     "prettier": "^3.4.2",
     "react-native-web": "^0.19.13",
     "react-redux": "^9.2.0",
+    "rimraf": "^5.0.5",
     "storybook": "^8.4.7",
     "styled-components": "^6.1.14",
     "typescript": "^5.7.2"
   },
   "scripts": {
-    "build": "tsc",
+    "build": "rimraf dist && tsc",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "svgr": "npx @svgr/cli --native --out-dir src/icons --replace-attr-values \"#212121={props.color || theme?.colors?.black || '#212121'}\" assets/svg-icons && node utils/svg-icons-parser.js && npx prettier --write src/icons"
   }
 }
