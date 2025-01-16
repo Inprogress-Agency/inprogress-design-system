@@ -5,11 +5,34 @@ const folderPath = 'src/icons'
 const themeImport = "import { useSelector } from 'react-redux'\n"
 const themeDeclaration = '  const { theme } = useSelector(state => state.theme)\n'
 
+function generateTypeDefinitions(files) {
+  const typeContent = `import { SvgProps } from 'react-native-svg'
+import { FC } from 'react'
+
+export interface IconProps extends SvgProps {
+  size?: number
+  color?: string
+}
+
+${files
+  .filter(file => file.endsWith('.js') && file !== 'index.js')
+  .map(file => {
+    const componentName = file.replace('.js', '')
+    return `export declare const ${componentName}: FC<IconProps>`
+  })
+  .join('\n')}
+`
+
+  fs.writeFileSync(path.join(folderPath, 'index.d.ts'), typeContent, 'utf8')
+}
+
 fs.readdir(folderPath, (err1, files) => {
   if (err1) {
     console.error('Error reading folder:', err1)
     return
   }
+
+  generateTypeDefinitions(files)
 
   files.forEach(file => {
     const filePath = path.join(folderPath, file)
@@ -22,16 +45,12 @@ fs.readdir(folderPath, (err1, files) => {
 
       let updatedData = data
 
-      // Vérifier si on a réellement besoin d'importer et utiliser le thème dans ce composant
       if (updatedData.includes('props.color')) {
-        // Ajouter l'importation du thème après l'importation de React
         updatedData = updatedData.replace("import * as React from 'react'\n", `$&${themeImport}`)
 
-        // Ajouter la déclaration du thème dans la fonction du composant
         updatedData = updatedData.replace(/function (.*?)\(props\) \{/, `$&\n${themeDeclaration}`)
       }
 
-      // Ajouter l'importation de l'élément 'G' dans le composant si nescessaire
       if (!updatedData.includes(' G')) {
         updatedData = updatedData.replace(
           "'react-native-svg'",
@@ -45,19 +64,20 @@ fs.readdir(folderPath, (err1, files) => {
         : 24
       const base = parseInt(width, 10) >= parseInt(height, 10) ? width : height
 
-      // Ajouter un élément 'G' englobant tous les éléments 'Path' et appliquer la propriété scale
       const haveViewBox = updatedData.includes('viewBox')
       updatedData = updatedData.replace(
         /<Svg([\s\S]*?)>\n([\s\S]*?)<\/Svg>/,
-        `<Svg$1>\n  <G scale={${
-          haveViewBox ? '1' : `(props.size || 24) / ${base}`
-        }}>\n$2\n  </G>\n</Svg>`
+        `<Svg$1>\n  <G scale={1}>\n$2\n  </G>\n</Svg>`
       )
+      if (!haveViewBox) {
+        updatedData = updatedData.replace(/<Svg([^>]*)viewBox="[^"]*"([^>]*)>/, '<Svg$1$2>')
+      }
 
-      // Remplacer width et height dans l'élément Svg par props.size si size est spécifiée
+      const viewBox = haveViewBox ? '' : ` viewBox="0 0 ${width} ${height}"`
+
       updatedData = updatedData.replace(
         /<Svg([\s\S]*?)width={(\d+)}([\s\S]*?)height={(\d+)}([\s\S]*?)>/,
-        '<Svg$1width={props.size || 24}$3height={props.size || 24}$5>'
+        `<Svg$1width={props.size || 24}$3height={props.size || 24}${viewBox}$5>`
       )
 
       updatedData = updatedData.replace('<Defs></Defs>', '<Defs />')

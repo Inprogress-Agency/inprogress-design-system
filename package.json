@@ -1,13 +1,10 @@
 {
   "name": "design-system",
-  "version": "0.0.18",
+  "version": "0.0.22",
   "homepage": "https://paulthiberville.github.io/design-system",
   "license": "MIT",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "paths": {
-    "@/Hooks": "./src/utils/Hooks"
-  },
   "files": [
     "dist",
     "dist/**/*"
@@ -22,11 +19,17 @@
       "import": "./dist/buttons/index.js",
       "require": "./dist/buttons/index.js",
       "default": "./dist/buttons/index.js"
+    },
+    "./icons": {
+      "import": "./dist/icons/index.js",
+      "require": "./dist/icons/index.js",
+      "default": "./dist/icons/index.js"
     }
   },
   "react-native": {
     ".": "./dist/index.js",
-    "./buttons": "./dist/buttons/index.js"
+    "./buttons": "./dist/buttons/index.js",
+    "./icons": "./dist/icons/index.js"
   },
   "dependencies": {
     "react-native-svg": "^13.6.0"
@@ -61,6 +64,7 @@
     "babel-loader": "^9.2.1",
     "metro-react-native-babel-preset": "^0.77.0",
     "prettier": "^3.4.2",
+    "react-native-svg-web": "^1.0.9",
     "react-native-web": "^0.19.13",
     "react-redux": "^9.2.0",
     "rimraf": "^5.0.5",
@@ -72,6 +76,6 @@
     "build": "rimraf dist && tsc",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "svgr": "npx @svgr/cli --native --out-dir src/icons --replace-attr-values \"#212121={props.color || theme?.colors?.black || '#212121'}\" assets/svg-icons && node utils/svg-icons-parser.js && npx prettier --write src/icons"
+    "svgr": "rimraf src/icons && npx @svgr/cli --native --out-dir src/icons --replace-attr-values \"#212121={props.color || theme?.colors?.black || '#212121'}\" assets/svg-icons && node utils/svg-icons-parser.js && npx prettier --write src/icons"
   }
 }

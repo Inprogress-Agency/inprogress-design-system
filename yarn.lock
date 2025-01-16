@@ -6407,6 +6407,11 @@ react-native-modal-selector@^2.1.1:
   dependencies:
     prop-types "^15.5.10"
 
+react-native-svg-web@^1.0.9:
+  version "1.0.9"
+  resolved "https://registry.yarnpkg.com/react-native-svg-web/-/react-native-svg-web-1.0.9.tgz#a50b1ac6e33eb9efdba38d58e6e13c193ef041c2"
+  integrity sha512-fggz1MPx55xP92ZlFWhvxfsd8/Mj3z63E1eo1pldtBRuNbR4LffvtY9hwj96bgHZU3gRwJL00LV3GAWRFthlnA==
+
 react-native-svg@^13.6.0:
   version "13.14.1"
   resolved "https://registry.yarnpkg.com/react-native-svg/-/react-native-svg-13.14.1.tgz#265ec50b57dc042b8b8bd55d03aaf394d1ba9f7a"

@@ -8,8 +8,9 @@
     "declaration": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
-    "allowSyntheticDefaultImports": true
+    "allowSyntheticDefaultImports": true,
+    "allowJs": true
   },
-  "include": ["src/**/*", "index.js", "assets"],
+  "include": ["src/**/*", "src/**/*.js", "src/**/*.ts", "src/**/*.tsx"],
   "exclude": ["node_modules", "dist", "stories", ".storybook"]
 }
