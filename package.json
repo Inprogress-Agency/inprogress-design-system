@@ -22,11 +22,17 @@
       "import": "./dist/buttons/index.js",
       "require": "./dist/buttons/index.js",
       "default": "./dist/buttons/index.js"
+    },
+    "./texts": {
+      "import": "./dist/texts/index.js",
+      "require": "./dist/texts/index.js",
+      "default": "./dist/texts/index.js"
     }
   },
   "react-native": {
     ".": "./dist/index.js",
-    "./buttons": "./dist/buttons/index.js"
+    "./buttons": "./dist/buttons/index.js",
+    "./texts": "./dist/texts/index.js"
   },
   "dependencies": {
     "react-native-svg": "^13.6.0"
