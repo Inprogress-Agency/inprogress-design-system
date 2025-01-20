@@ -24,12 +24,18 @@
       "import": "./dist/icons/index.js",
       "require": "./dist/icons/index.js",
       "default": "./dist/icons/index.js"
+    },
+    "./texts": {
+      "import": "./dist/texts/index.js",
+      "require": "./dist/texts/index.js",
+      "default": "./dist/texts/index.js"
     }
   },
   "react-native": {
     ".": "./dist/index.js",
     "./buttons": "./dist/buttons/index.js",
-    "./icons": "./dist/icons/index.js"
+    "./icons": "./dist/icons/index.js",
+    "./texts": "./dist/texts/index.js"
   },
   "dependencies": {
     "react-native-svg": "^13.6.0"
