@@ -12,9 +12,34 @@ const config: StorybookConfig = {
       config.resolve.alias = {
         ...config.resolve.alias,
         'react-native$': 'react-native-web',
-        'react-native-web': 'react-native-web',
+        'react-native-svg': 'react-native-svg-web',
       }
       config.resolve.extensions = ['.web.js', '.js', '.web.tsx', '.tsx', '.web.ts', '.ts']
+    }
+
+    if (config.module?.rules) {
+      config.module.rules = config.module.rules.filter(
+        rule => rule.test?.toString() !== '/\\.jsx?$/'
+      )
+
+      config.module.rules.push({
+        test: /\.(js|jsx)$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env', '@babel/preset-react'],
+            plugins: [
+              [
+                '@babel/plugin-transform-react-jsx',
+                {
+                  runtime: 'automatic',
+                },
+              ],
+            ],
+          },
+        },
+      })
     }
 
     if (process.env.NODE_ENV === 'production') {
