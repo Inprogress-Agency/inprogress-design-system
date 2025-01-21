@@ -7,8 +7,9 @@ import Toast from 'react-native-toast-message'
 import { GestureHandlerRootView } from 'react-native-gesture-handler'
 import PhoneMockup from '../utils/Components/PhoneMockup'
 import ThemeProvider from '../utils/Components/ThemeProvider'
-import Settings from '../utils/Components/Settings'
+import Settings from '../utils/Components/Settings/Settings'
 import { toastConfig } from '../utils/Config/toastConfig'
+import Translations from '../utils/Components/Translations'
 
 const styles = StyleSheet.create({
   container: {
@@ -22,10 +23,11 @@ const styles = StyleSheet.create({
 
 export const decorators = [
   (Story: ComponentType) => (
-    <View>
+    <>
       <Provider store={store}>
         <ThemeProvider>
           <View style={styles.container}>
+            <Translations />
             <PhoneMockup>
               <GestureHandlerRootView>
                 <Story />
@@ -36,7 +38,7 @@ export const decorators = [
           </View>
         </ThemeProvider>
       </Provider>
-    </View>
+    </>
   ),
 ]
 

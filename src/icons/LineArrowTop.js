@@ -9,14 +9,14 @@ function SvgLineArrowTop(props) {
     <Svg
       width={props.size || 24}
       height={props.size || 24}
-      viewBox="0 0 12 7"
+      viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
       <G scale={1}>
         <Path
-          d="M1 6.25l5-5 5 5"
+          d="M7 14.5l5-5 5 5"
           stroke={props.color || theme?.colors?.black || '#212121'}
           strokeWidth={1.5}
           strokeLinecap="round"
