@@ -10,5 +10,5 @@ export default meta
 type Story = StoryObj<typeof Text>
 
 export const Overview = {
-  args: {children: 'Exemple'}
+  args: { children: 'Exemple' },
 }
