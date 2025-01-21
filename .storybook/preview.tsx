@@ -7,6 +7,9 @@ import { StoreTheme } from '../utils/Store/Theme/theme.types'
 import { StyleSheet, Switch, Text } from 'react-native'
 import { View } from 'react-native'
 import { setIsDarkMode } from '../utils/Store/Theme/Theme'
+import Toast from 'react-native-toast-message'
+import { GestureHandlerRootView } from 'react-native-gesture-handler'
+import { toastConfig } from '../utils/Config/toastConfig'
 
 const styles = StyleSheet.create({
   container: {
@@ -27,7 +30,6 @@ const ThemeDecorator = ({ children }: { children: ReactNode }) => {
   const handleChangeIsDarkMode = (value: boolean) => {
     dispatch(setIsDarkMode(value))
   }
-
   return (
     <>
       <View style={styles.container}>
@@ -41,11 +43,16 @@ const ThemeDecorator = ({ children }: { children: ReactNode }) => {
 
 export const decorators = [
   (Story: ComponentType) => (
-    <Provider store={store}>
-      <ThemeDecorator>
-        <Story />
-      </ThemeDecorator>
-    </Provider>
+    <View>
+      <Provider store={store}>
+        <ThemeDecorator>
+          <GestureHandlerRootView>
+            <Story />
+            <Toast toastConfig={toastConfig} />
+          </GestureHandlerRootView>
+        </ThemeDecorator>
+      </Provider>
+    </View>
   ),
 ]
 
