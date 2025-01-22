@@ -1,3 +1,5 @@
+import { Theme } from '../types/Theme'
+
 export type ButtonVariant = 'primary' | 'secondary'
 
 export interface ButtonProps {
@@ -13,10 +15,10 @@ export interface ButtonProps {
 
 export interface StyledButtonProps {
   variant: ButtonVariant
-  theme: any // Idéalement, définissez un type plus précis pour votre thème
+  theme: Theme
 }
 
 export interface StyledTextProps {
   variant: ButtonVariant
-  theme: any // Idéalement, définissez un type plus précis pour votre thème
+  theme: Theme
 }
