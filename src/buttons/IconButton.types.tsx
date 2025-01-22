@@ -1,5 +1,7 @@
-import { ReactNode } from "react"
-import { TouchableOpacityProps } from "react-native"
+import { ReactNode } from 'react'
+import { TouchableOpacityProps } from 'react-native'
+import { Color } from '../types/Color'
+import { Theme } from '../types/Theme'
 /**
  * Button with icon
  * @extends {TouchableOpacityProps}
@@ -8,10 +10,10 @@ export interface IconButtonProps extends TouchableOpacityProps {
   /**The icon to display in the button */
   icon: ReactNode
   /**Color of the button */
-  color: string
+  color: Color
 }
 
 export interface StyledButtonProps {
-  color: string
-  theme: any // Idéalement, définissez un type plus précis pour votre thème
+  color: Color
+  theme: Theme
 }

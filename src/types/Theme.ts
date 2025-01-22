@@ -1,17 +1,19 @@
+import { Color } from './Color'
+
 export type Colors = {
-  primary: string
-  secondary: string
-  tertiary: string
-  white: string
-  black: string
-  grey1: string
-  grey2: string
-  grey3: string
-  red: string
-  green: string
-  warning: string
-  info: string
-  success: string
+  primary: Color
+  secondary: Color
+  tertiary: Color
+  white: Color
+  black: Color
+  grey1: Color
+  grey2: Color
+  grey3: Color
+  red: Color
+  green: Color
+  warning: Color
+  info: Color
+  success: Color
 }
 
 export type FontSize = {
