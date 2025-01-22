@@ -54,3 +54,11 @@ export const parameters = {
     theme: storybookTheme,
   },
 }
+
+export const argTypes = {
+  color: {
+    control: {
+      type: 'color',
+    },
+  },
+}

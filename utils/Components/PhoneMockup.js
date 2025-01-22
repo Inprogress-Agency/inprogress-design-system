@@ -1,4 +1,5 @@
 import { Image, View } from 'react-native'
+import { useSelector } from 'react-redux'
 import styled, { css } from 'styled-components/native'
 
 const StyledPhoneMockup = styled(View)`
@@ -17,7 +18,7 @@ const StyledPhoneMockup = styled(View)`
 
 const StyledStatusBar = styled(View)`
   width: 100%;
-  height: 37px;
+  height: 35px;
 `
 
 const StyledNavigationBar = styled(View)`
@@ -33,14 +34,27 @@ const StyledContent = styled(View)`
 `
 
 const PhoneMockup = ({ children }) => {
+  const { isDarkMode } = useSelector(state => state.theme)
   return (
     <StyledPhoneMockup>
       <StyledStatusBar>
-        <Image style={{ width: '100%', height: '100%' }} source={{ uri: './statusBar.png' }} />
+        <Image
+          style={{ width: '100%', height: '100%' }}
+          source={{
+            uri: isDarkMode ? './status-bar-dark-theme.png' : './status-bar-light-theme.png',
+          }}
+        />
       </StyledStatusBar>
       <StyledContent>{children}</StyledContent>
       <StyledNavigationBar>
-        <Image style={{ width: '100%', height: '100%' }} source={{ uri: './navigationBar.png' }} />
+        <Image
+          style={{ width: '100%', height: '100%' }}
+          source={{
+            uri: isDarkMode
+              ? './navigation-bar-dark-theme.png'
+              : './navigation-bar-light-theme.png',
+          }}
+        />
       </StyledNavigationBar>
     </StyledPhoneMockup>
   )
