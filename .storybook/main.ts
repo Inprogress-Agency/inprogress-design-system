@@ -46,6 +46,7 @@ const config: StorybookConfig = {
       config.output = {
         ...config.output,
         publicPath: './',
+        assetModuleFilename: 'assets/[name][ext]',
       }
     }
 

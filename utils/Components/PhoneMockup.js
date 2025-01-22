@@ -36,11 +36,11 @@ const PhoneMockup = ({ children }) => {
   return (
     <StyledPhoneMockup>
       <StyledStatusBar>
-        <Image style={{ width: '100%', height: '100%' }} source={{ uri: '/statusBar.png' }} />
+        <Image style={{ width: '100%', height: '100%' }} source={{ uri: './statusBar.png' }} />
       </StyledStatusBar>
       <StyledContent>{children}</StyledContent>
       <StyledNavigationBar>
-        <Image style={{ width: '100%', height: '100%' }} source={{ uri: '/navigationBar.png' }} />
+        <Image style={{ width: '100%', height: '100%' }} source={{ uri: './navigationBar.png' }} />
       </StyledNavigationBar>
     </StyledPhoneMockup>
   )
