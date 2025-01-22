@@ -1,6 +1,6 @@
 import { TextProps as RNTextProps } from 'react-native'
-import { Color } from '../types/Color'
-import { Theme } from '../types/Theme'
+import { Color } from '../../../src/types/Color'
+import { Theme } from '../../../src/types/Theme'
 
 /**
  * Custom text component

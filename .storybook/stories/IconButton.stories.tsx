@@ -1,29 +1,13 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import { IconButton } from '../../src/buttons'
-import * as icons from '../../src/icons'
+import { LineMenu2 } from '../../src/icons'
+import { iconOptions } from '../../utils/argTypesOptions/icon'
 
 const meta: Meta<typeof IconButton> = {
-  title: 'IconButton',
+  title: 'Buttons/IconButton',
   component: IconButton,
   argTypes: {
-    icon: {
-      options: Object.keys(icons),
-      mapping: Object.keys(icons).reduce((acc, key) => {
-        const Icon = icons[key]
-        acc[key] = <Icon size={24} />
-        return acc
-      }, {}),
-      control: {
-        type: 'select',
-        labels: Object.keys(icons).reduce((acc, key) => {
-          acc[key] = key
-          return acc
-        }, {}),
-      },
-    },
-    color: {
-      control: 'color',
-    },
+    icon: iconOptions,
   },
 }
 
@@ -32,6 +16,6 @@ type Story = StoryObj<typeof IconButton>
 
 export const Overview: Story = {
   args: {
-    icon: <icons.LineMenu2 size={24} />,
+    icon: LineMenu2,
   },
 }
