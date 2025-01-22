@@ -8,7 +8,7 @@ export default create({
 
   brandTitle: 'InProgress',
   brandUrl: 'https://inprogress.agency',
-  brandImage: '/logo.png',
+  brandImage: './logo.png',
   brandTarget: '_self',
 
   //
