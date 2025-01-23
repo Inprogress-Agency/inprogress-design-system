@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import { Button } from '../../src/buttons'
-import { LinePlus } from '../../src/icons'
-import { iconOptionsWithNull } from '../../utils/argTypesOptions/icon'
+import { Button } from '../../../src/buttons'
+import { LinePlus } from '../../../src/icons'
+import { iconOptionsWithNull } from '../../../utils/argTypesOptions/icon'
 
 const meta: Meta<typeof Button> = {
   title: 'Buttons/Button',
