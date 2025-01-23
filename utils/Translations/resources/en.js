@@ -1,3 +1,6 @@
 export default {
-  hello_world: 'Hello World !',
+  copy_text_area: 'Copy',
+  toastText: {
+    copy_Link: 'Copied!',
+  },
 }
