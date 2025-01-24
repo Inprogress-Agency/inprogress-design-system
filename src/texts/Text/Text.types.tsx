@@ -10,15 +10,15 @@ export interface TextProps extends RNTextProps {
   /** If the text is bold or not
    * @default false
    */
-  regular: boolean
+  regular?: boolean
   /** Color of the text if not defined, use theme.colors.black
    * @default null
    */
-  color: Color | null
+  color?: Color | null
   /** Size of the text
    * @default 14
    */
-  fontSize: number
+  fontSize?: number
   /** Content of the text
    * @required
    */
