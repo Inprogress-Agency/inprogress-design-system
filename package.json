@@ -29,13 +29,19 @@
       "import": "./dist/texts/index.js",
       "require": "./dist/texts/index.js",
       "default": "./dist/texts/index.js"
+    },
+    "./controls": {
+      "import": "./dist/controls/index.js",
+      "require": "./dist/controls/index.js",
+      "default": "./dist/controls/index.js"
     }
   },
   "react-native": {
     ".": "./dist/index.js",
     "./buttons": "./dist/buttons/index.js",
     "./icons": "./dist/icons/index.js",
-    "./texts": "./dist/texts/index.js"
+    "./texts": "./dist/texts/index.js",
+    "./controls": "./dist/controls/index.js"
   },
   "dependencies": {},
   "peerDependencies": {
