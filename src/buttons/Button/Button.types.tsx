@@ -6,31 +6,31 @@ import { IconComponent } from '../../types/Icon'
 export type ButtonVariant = 'primary' | 'secondary'
 
 export interface ButtonProps extends TouchableOpacityProps {
-  /** Icon à afficher sur le bouton avant le text
+  /** Icon to display before the text
    * @default null
    */
   icon: IconComponent | null
-  /** Icon à afficher sur le bouton après le text
+  /** Icon to display after the text
    * @default null
    */
   afterIcon: IconComponent | null
-  /** Text à afficher sur le bouton
+  /** Text to display on the button
    * @default ''
    */
   title: string
-  /** Indique si le bouton est en cours de chargement
+  /** Indicates if the button is loading
    * @default false
    */
   loading: boolean
-  /** Indique si le bouton est désactivé
+  /** Indicates if the button is disabled
    * @default false
    */
   disabled: boolean
-  /** Le style visuel du bouton
+  /** Visual style of the button
    * @default primary
    */
   variant: ButtonVariant
-  /** Couleur du bouton
+  /** Color of the button
    * @default theme.colors.primary
    */
   color: Color | null
