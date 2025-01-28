@@ -1,19 +1,19 @@
-import { Color } from './Color'
+import { ColorValue } from 'react-native'
 
 export type Colors = {
-  primary: Color
-  secondary: Color
-  tertiary: Color
-  white: Color
-  black: Color
-  grey1: Color
-  grey2: Color
-  grey3: Color
-  red: Color
-  green: Color
-  warning: Color
-  info: Color
-  success: Color
+  primary: ColorValue
+  secondary: ColorValue
+  tertiary: ColorValue
+  white: ColorValue
+  black: ColorValue
+  grey1: ColorValue
+  grey2: ColorValue
+  grey3: ColorValue
+  red: ColorValue
+  green: ColorValue
+  warning: ColorValue
+  info: ColorValue
+  success: ColorValue
 }
 
 export type FontSize = {
