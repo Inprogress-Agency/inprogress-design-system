@@ -7,13 +7,13 @@ export const iconOptions = {
     return acc
   }, {}),
   control: {
-    type: 'select',
+    type: 'select' as const,
     labels: Object.keys(icons).reduce((acc, key) => {
       acc[key] = key
       return acc
     }, {}),
   },
-}
+} as const
 
 export const iconOptionsWithNull = {
   options: ['null', ...Object.keys(icons)],
@@ -25,7 +25,7 @@ export const iconOptionsWithNull = {
     }, {}),
   },
   control: {
-    type: 'select',
+    type: 'select' as const,
     labels: {
       null: 'null',
       ...Object.keys(icons).reduce((acc, key) => {
@@ -34,4 +34,4 @@ export const iconOptionsWithNull = {
       }, {}),
     },
   },
-}
+} as const

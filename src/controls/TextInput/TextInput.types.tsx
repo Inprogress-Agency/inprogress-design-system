@@ -12,6 +12,10 @@ export interface TextInputProps extends RNTextInputProps {
    * @default false
    */
   disabled: boolean
+  /** Whether the input has an error
+   * @default null
+   */
+  error: boolean | null
 }
 
 export interface StyledTextInputProps extends StyledComponentProps {
