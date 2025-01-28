@@ -1,5 +1,6 @@
-import { ColorValue, TextProps as RNTextProps } from 'react-native'
+import { TextProps as RNTextProps } from 'react-native'
 import { Theme } from '../../../src/types/Theme'
+import { Color } from '../../types/Color'
 
 /**
  * Custom text component
@@ -13,7 +14,7 @@ export interface TextProps extends RNTextProps {
   /** Color of the text if not defined, use theme.colors.black
    * @default null
    */
-  color?: ColorValue | null
+  color?: Color | null
   /** Size of the text
    * @default 14
    */
@@ -27,6 +28,6 @@ export interface TextProps extends RNTextProps {
 export interface StyledTextProps {
   theme: Theme
   regular: boolean
-  color: ColorValue | null
+  color: Color | null
   fontSize: number | null
 }

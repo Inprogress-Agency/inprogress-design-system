@@ -9,6 +9,11 @@ const meta: Meta<typeof Button> = {
   argTypes: {
     icon: iconOptionsWithNull,
     afterIcon: iconOptionsWithNull,
+    color: {
+      control: {
+        type: 'color',
+      },
+    },
   },
 }
 
