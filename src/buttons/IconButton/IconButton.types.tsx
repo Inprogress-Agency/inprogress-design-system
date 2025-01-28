@@ -1,5 +1,4 @@
-import { TouchableOpacityProps } from 'react-native'
-import { Color } from '../../../src/types/Color'
+import { ColorValue, TouchableOpacityProps } from 'react-native'
 import { Theme } from '../../../src/types/Theme'
 import { IconComponent } from '../../types/Icon'
 /**
@@ -10,10 +9,10 @@ export interface IconButtonProps extends TouchableOpacityProps {
   /**The icon to display in the button */
   icon: IconComponent
   /**Color of the button */
-  color: Color
+  color: ColorValue
 }
 
 export interface StyledButtonProps {
-  color: Color
+  color: ColorValue
   theme: Theme
 }
