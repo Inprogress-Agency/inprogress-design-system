@@ -5,7 +5,13 @@ import { StoreTheme } from '../../../utils/Store/Theme/Theme.types'
 import { useSelector } from 'react-redux'
 import { TextInputProps } from './TextInput.types'
 
-const TextInput = ({ value, insideModal = false, disabled = false, ...props }: TextInputProps) => {
+const TextInput = ({
+  value,
+  insideModal = false,
+  disabled = false,
+  error = null,
+  ...props
+}: TextInputProps) => {
   const Input = useMemo(() => {
     if (insideModal) {
       return StyledBottomSheetTextInput
