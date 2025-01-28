@@ -7,6 +7,11 @@ const meta: Meta<typeof IconButtonBadge> = {
   component: IconButtonBadge,
   argTypes: {
     icon: iconOptions,
+    color: {
+      control: {
+        type: 'color',
+      },
+    },
   },
 }
 

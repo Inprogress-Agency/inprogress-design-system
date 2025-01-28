@@ -8,6 +8,11 @@ const meta: Meta<typeof IconButton> = {
   component: IconButton,
   argTypes: {
     icon: iconOptions,
+    color: {
+      control: {
+        type: 'color',
+      },
+    },
   },
 }
 

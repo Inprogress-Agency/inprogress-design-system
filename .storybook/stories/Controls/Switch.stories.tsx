@@ -10,6 +10,26 @@ const meta: Meta<typeof Switch> = {
         type: 'boolean',
       },
     },
+    activeThumbColor: {
+      control: {
+        type: 'color',
+      },
+    },
+    thumbColor: {
+      control: {
+        type: 'color',
+      },
+    },
+    trackColor: {
+      control: {
+        type: 'color',
+      },
+    },
+    disabled: {
+      control: {
+        type: 'boolean',
+      },
+    },
   },
 }
 

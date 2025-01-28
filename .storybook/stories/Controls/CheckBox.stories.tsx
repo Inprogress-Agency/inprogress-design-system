@@ -5,6 +5,11 @@ const meta: Meta<typeof CheckBox> = {
   title: 'Controls/CheckBox',
   component: CheckBox,
   argTypes: {
+    color: {
+      control: {
+        type: 'color',
+      },
+    },
     borderColor: {
       control: {
         type: 'color',
