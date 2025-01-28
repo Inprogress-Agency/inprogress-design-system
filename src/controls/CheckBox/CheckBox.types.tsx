@@ -1,5 +1,4 @@
-import { TouchableOpacityProps } from 'react-native'
-import { Color } from '../../types/Color'
+import { ColorValue, TouchableOpacityProps } from 'react-native'
 import { Theme } from '../../types/Theme'
 
 /**
@@ -11,16 +10,16 @@ export interface CheckBoxProps extends TouchableOpacityProps {
   /** Current state of the checkbox */
   value: boolean
   /** Color of the checkbox icon */
-  color: Color | null
+  color: ColorValue | null
   /** Color of the checkbox border */
-  borderColor: Color | null
+  borderColor: ColorValue | null
   /** Background color when checkbox is not checked */
-  notCheckedBackgroundColor: Color | null
+  notCheckedBackgroundColor: ColorValue | null
 }
 
 export interface StyledCheckBoxProps {
   theme: Theme
   checked: boolean
-  borderColor: Color | null
-  notCheckedBackgroundColor: Color | null
+  borderColor: ColorValue | null
+  notCheckedBackgroundColor: ColorValue | null
 }
