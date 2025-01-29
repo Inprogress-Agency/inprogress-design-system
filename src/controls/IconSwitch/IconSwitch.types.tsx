@@ -4,7 +4,7 @@ import { StyledComponentProps } from '../../types/StyledComponent'
 interface Side {
   condition: string | number
   icon: IconComponent
-  action: Function
+  action: () => void
 }
 
 export interface IconSwitchProps {
