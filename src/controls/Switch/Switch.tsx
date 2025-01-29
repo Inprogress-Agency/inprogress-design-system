@@ -1,12 +1,12 @@
-import React, { memo } from 'react'
+import React from 'react'
 import { Switch as RNSwitch } from 'react-native'
-import { StoreTheme } from '../../../utils/Store/Theme/Theme.types'
 import { useSelector } from 'react-redux'
 import { StyledSwitch } from './Switch.styles'
 import { SwitchProps } from './Switch.types'
+import { RootState } from '../../types/RootState'
 
 const Switch = (props: SwitchProps) => {
-  const { theme } = useSelector((state: { theme: StoreTheme }) => state.theme)
+  const { theme } = useSelector((state: RootState) => state.theme)
 
   return (
     <StyledSwitch checked={props.value}>

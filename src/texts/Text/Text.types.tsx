@@ -1,11 +1,7 @@
 import { TextProps as RNTextProps } from 'react-native'
-import { Theme } from '../../../src/types/Theme'
 import { Color } from '../../types/Color'
+import { StyledComponentProps } from '../../types/StyledComponent'
 
-/**
- * Custom text component
- * @extends {RNTextProps}
- */
 export interface TextProps extends RNTextProps {
   /** If the text is bold or not
    * @default false
@@ -25,8 +21,7 @@ export interface TextProps extends RNTextProps {
   children: string
 }
 
-export interface StyledTextProps {
-  theme: Theme
+export interface StyledTextProps extends StyledComponentProps {
   regular: boolean
   color: Color | null
   fontSize: number | null

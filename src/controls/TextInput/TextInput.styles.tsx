@@ -1,9 +1,8 @@
 import styled, { css } from 'styled-components/native'
 import { StyledTextInputProps } from './TextInput.types'
-import { TextInput } from 'react-native'
 import { BottomSheetTextInput } from '@gorhom/bottom-sheet'
 
-export const StyledTextInput = styled(TextInput)`
+export const StyledTextInput = styled.TextInput`
   ${({ theme, disabled, error }: StyledTextInputProps) => css`
     font-family: 'Poppins-Medium';
     color: ${theme.colors.black};

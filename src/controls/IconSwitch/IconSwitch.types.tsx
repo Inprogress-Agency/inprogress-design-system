@@ -1,7 +1,7 @@
 import { IconComponent } from '../../types/Icon'
 import { StyledComponentProps } from '../../types/StyledComponent'
 
-type Side = {
+interface Side {
   condition: string | number
   icon: IconComponent
   action: Function

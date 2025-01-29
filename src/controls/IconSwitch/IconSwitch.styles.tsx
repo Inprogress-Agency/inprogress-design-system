@@ -1,9 +1,8 @@
-import { TouchableOpacity, View } from 'react-native'
 import styled, { css } from 'styled-components/native'
 import { StyledComponentProps } from '../../types/StyledComponent'
 import { StyledIconProps } from './IconSwitch.types'
 
-export const StyledSwitch = styled(View)<StyledComponentProps>`
+export const StyledSwitch = styled.View`
   ${({ theme }: StyledComponentProps) => css`
     width: ${theme.size.l2};
     height: ${theme.fontSize.xxl2};
@@ -15,7 +14,7 @@ export const StyledSwitch = styled(View)<StyledComponentProps>`
     align-items: center;
   `}
 `
-export const StyledIcon = styled(TouchableOpacity)<StyledIconProps>`
+export const StyledIcon = styled.TouchableOpacity`
   ${({ theme, active }: StyledIconProps) => css`
     width: ${theme.space.xxl};
     height: ${theme.space.xxl};

@@ -1,11 +1,10 @@
-import { TextInput, View } from 'react-native'
 import styled, { css } from 'styled-components/native'
 import { Text } from '../../texts'
 import { BottomSheetTextInput } from '@gorhom/bottom-sheet'
 import { StyledComponentProps } from '../../types/StyledComponent'
 import { StyledCountProps, StyledWrapperProps } from './TextArea.types'
 
-export const StyledWrapper = styled(View)`
+export const StyledWrapper = styled.View`
   ${({ theme, bgWhite }: StyledWrapperProps) => css`
     padding: ${theme.space.std} ${theme.space.m};
     border: ${bgWhite ? `1px solid ${theme.colors.grey1}` : `1px solid ${theme.colors.white}`};
@@ -16,7 +15,7 @@ export const StyledWrapper = styled(View)`
   `}
 `
 
-export const StyledTextInput = styled(TextInput)`
+export const StyledTextInput = styled.TextInput`
   ${({ theme }: StyledComponentProps) => css`
     font-family: 'Poppins-Medium';
     width: ${theme.size.fill};
@@ -35,7 +34,7 @@ export const StyledBottomSheetTextInput = styled(BottomSheetTextInput)`
     color: ${theme.colors.black};
   `}
 `
-export const StyledFooter = styled(View)`
+export const StyledFooter = styled.View`
   display: flex;
   flex-direction: row;
   justify-content: space-between;

@@ -1,8 +1,7 @@
-import { View } from 'react-native'
 import styled, { css } from 'styled-components/native'
 import { StyledSwitchProps } from './Switch.types'
 
-export const StyledSwitch = styled(View)<StyledSwitchProps>`
+export const StyledSwitch = styled.View`
   ${({ checked, theme }: StyledSwitchProps) => css`
     align-items: center;
     justify-content: center;

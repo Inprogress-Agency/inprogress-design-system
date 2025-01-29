@@ -1,12 +1,8 @@
 import styled, { css } from 'styled-components/native'
-import {
-  StyledButtonProps,
-  StyledContentProps,
-  StyledImageProps,
-} from './IllustratedArrowButton.types'
+import { StyledComponentProps } from '../../types/StyledComponent'
 
-export const StyledButton = styled.TouchableOpacity<StyledButtonProps>`
-  ${({ theme }: StyledButtonProps) => css`
+export const StyledButton = styled.TouchableOpacity`
+  ${({ theme }: StyledComponentProps) => css`
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -17,16 +13,16 @@ export const StyledButton = styled.TouchableOpacity<StyledButtonProps>`
   `}
 `
 
-export const StyledImage = styled.Image<StyledImageProps>`
-  ${({ theme }: StyledImageProps) => css`
+export const StyledImage = styled.Image`
+  ${({ theme }: StyledComponentProps) => css`
     border-radius: 999px;
     height: ${theme.size.m};
     width: ${theme.size.m};
   `}
 `
 
-export const StyledContent = styled.View<StyledContentProps>`
-  ${({ theme }: StyledContentProps) => css`
+export const StyledContent = styled.View`
+  ${({ theme }: StyledComponentProps) => css`
     flex: 1;
     padding: ${theme.space.xs};
   `}

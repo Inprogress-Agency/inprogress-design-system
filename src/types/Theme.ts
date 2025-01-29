@@ -1,6 +1,6 @@
 import { Color } from './Color'
 
-export type Colors = {
+export interface Colors {
   primary: Color
   secondary: Color
   tertiary: Color
@@ -16,7 +16,7 @@ export type Colors = {
   success: Color
 }
 
-export type FontSize = {
+export interface FontSize {
   xxs: string
   xs: string
   s: string
@@ -32,12 +32,12 @@ export type FontSize = {
   xxl5: string
 }
 
-export type FontWeight = {
+export interface FontWeight {
   normal: string
   bold: string
 }
 
-export type Space = {
+export interface Space {
   none: string
   xxs: string
   xs: string
@@ -53,7 +53,7 @@ export type Space = {
   auto: string
 }
 
-export type Size = {
+export interface Size {
   xxs: string
   xs: string
   s: string
@@ -69,7 +69,7 @@ export type Size = {
   fill: string
 }
 
-export type BorderRadius = {
+export interface BorderRadius {
   xxs: string
   xs: string
   s: string
@@ -79,7 +79,7 @@ export type BorderRadius = {
   xxl: string
 }
 
-export type Layout = {
+export interface Layout {
   flex: number
   display: string
   flexDirection: string
@@ -87,7 +87,7 @@ export type Layout = {
   alignItems?: string
 }
 
-export type Theme = {
+export interface Theme {
   colors: Colors
   fontSize: FontSize
   fontWeight: FontWeight

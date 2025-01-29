@@ -7,8 +7,8 @@ import {
 } from './SearchBar.styles'
 import { LineClose, Search } from '../../icons'
 import { ButtonCloseProps, SearchBarProps } from './SearchBar.types'
-import { StoreTheme } from '../../../utils/Store/Theme/Theme.types'
 import { useSelector } from 'react-redux'
+import { RootState } from '../../types/RootState'
 
 export const FakeSearchBar = memo(({ placeholder }: { placeholder: string }) => {
   return (
@@ -20,7 +20,7 @@ export const FakeSearchBar = memo(({ placeholder }: { placeholder: string }) => 
 })
 
 const ResetButton = memo(({ value, onChange }: ButtonCloseProps) => {
-  const { theme } = useSelector((state: { theme: StoreTheme }) => state.theme)
+  const { theme } = useSelector((state: RootState) => state.theme)
 
   if (!value) {
     return null

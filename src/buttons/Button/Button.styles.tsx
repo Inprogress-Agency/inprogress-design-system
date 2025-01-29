@@ -1,10 +1,9 @@
-import { TouchableOpacity } from 'react-native'
 import { StyledButtonProps, StyledTextProps } from './Button.types'
 import styled, { css } from 'styled-components/native'
 import { isBackgroundLight } from '../../../utils/Functions/isBackgroundLight'
 import { Text } from '../../texts'
 
-export const StyledButton = styled(TouchableOpacity)<StyledButtonProps>`
+export const StyledButton = styled.TouchableOpacity`
   ${({ theme, color, variant, isDarkMode, disabled }: StyledButtonProps) => css`
     flex-shrink: 0;
     padding: 12px;
@@ -28,7 +27,7 @@ export const StyledButton = styled(TouchableOpacity)<StyledButtonProps>`
   `}
 `
 
-export const StyledText = styled(Text)<StyledTextProps>`
+export const StyledText = styled(Text)`
   ${({ theme, variant, color, isDarkMode }: StyledTextProps) => css`
     flex-shrink: 1;
     color: ${variant === 'primary'

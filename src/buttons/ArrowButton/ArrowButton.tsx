@@ -3,12 +3,12 @@ import React from 'react'
 import { StyledButton } from '../Button/Button.styles'
 import { StyledContent, StyledIconWrapper, StyledTitle } from './ArrowButton.styles'
 import { useSelector } from 'react-redux'
-import { StoreTheme } from '../../../utils/Store/Theme/Theme.types'
 import { ArrowButtonProps } from './ArrowButton.types'
 import { LineArrowRight } from '../../icons'
+import { RootState } from '../../types/RootState'
 
 const ButtonArrow = ({ icon: Icon, title, subtitle, ...props }: ArrowButtonProps) => {
-  const { theme } = useSelector((state: { theme: StoreTheme }) => state.theme)
+  const { theme } = useSelector((state: RootState) => state.theme)
   return (
     <StyledButton {...props}>
       <StyledIconWrapper>
