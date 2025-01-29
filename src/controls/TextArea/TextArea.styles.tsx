@@ -3,6 +3,7 @@ import { Text } from '../../texts'
 import { BottomSheetTextInput } from '@gorhom/bottom-sheet'
 import { StyledComponentProps } from '../../types/StyledComponent'
 import { StyledCountProps, StyledWrapperProps } from './TextArea.types'
+import { Platform } from 'react-native'
 
 export const StyledWrapper = styled.View`
   ${({ theme, bgWhite }: StyledWrapperProps) => css`
@@ -17,7 +18,7 @@ export const StyledWrapper = styled.View`
 
 export const StyledTextInput = styled.TextInput`
   ${({ theme }: StyledComponentProps) => css`
-    font-family: 'Poppins-Medium';
+    ${Platform.OS === 'web' ? 'font-weight: 600' : 'font-family: Poppins-Medium'};
     width: ${theme.size.fill};
     padding: 0;
     margin-bottom: ${theme.space.xs};
@@ -27,7 +28,7 @@ export const StyledTextInput = styled.TextInput`
 
 export const StyledBottomSheetTextInput = styled(BottomSheetTextInput)`
   ${({ theme }: StyledComponentProps) => css`
-    font-family: 'Poppins-Medium';
+    ${Platform.OS === 'web' ? 'font-weight: 600' : 'font-family: Poppins-Medium'};
     width: ${theme.size.fill};
     padding: 0;
     margin-bottom: ${theme.space.xs};

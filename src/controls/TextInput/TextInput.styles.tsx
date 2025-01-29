@@ -1,10 +1,11 @@
 import styled, { css } from 'styled-components/native'
 import { StyledTextInputProps } from './TextInput.types'
 import { BottomSheetTextInput } from '@gorhom/bottom-sheet'
+import { Platform } from 'react-native'
 
 export const StyledTextInput = styled.TextInput`
   ${({ theme, disabled, error }: StyledTextInputProps) => css`
-    font-family: 'Poppins-Medium';
+    ${Platform.OS === 'web' ? 'font-weight: 600' : 'font-family: Poppins-Medium'};
     color: ${theme.colors.black};
     background-color: ${theme.colors.grey1};
     border-radius: ${theme.borderRadius.l};
@@ -17,7 +18,7 @@ export const StyledTextInput = styled.TextInput`
 
 export const StyledBottomSheetTextInput = styled(BottomSheetTextInput)`
   ${({ theme, disabled, error }: StyledTextInputProps) => css`
-    font-family: 'Poppins-Medium';
+    ${Platform.OS === 'web' ? 'font-weight: 600' : 'font-family: Poppins-Medium'};
     color: ${theme.colors.black};
     background-color: ${theme.colors.grey1};
     border-radius: ${theme.borderRadius.l};
