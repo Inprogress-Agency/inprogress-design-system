@@ -1,5 +1,5 @@
 import { Color } from '../../types/Color'
-import { Theme } from '../../types/Theme'
+import { StyledComponentProps } from '../../types/StyledComponent'
 import { SwitchProps as RNSwitchProps } from 'react-native'
 
 export interface SwitchProps extends RNSwitchProps {
@@ -9,7 +9,6 @@ export interface SwitchProps extends RNSwitchProps {
   activeThumbColor?: Color
 }
 
-export interface StyledSwitchProps {
+export interface StyledSwitchProps extends StyledComponentProps {
   checked: boolean
-  theme: Theme
 }

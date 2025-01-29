@@ -2,9 +2,9 @@ import { isBackgroundLight } from '../../../utils/Functions/isBackgroundLight'
 import React from 'react'
 import { ActivityIndicator, View } from 'react-native'
 import { useSelector } from 'react-redux'
-import { StoreTheme } from '../../../utils/Store/Theme/Theme.types'
 import { ButtonProps } from './Button.types'
 import { StyledButton, StyledText } from './Button.styles'
+import { RootState } from '../../types/RootState'
 
 const Button = ({
   icon: Icon,
@@ -16,7 +16,7 @@ const Button = ({
   color,
   ...props
 }: ButtonProps) => {
-  const { theme, isDarkMode } = useSelector((state: { theme: StoreTheme }) => state.theme)
+  const { theme, isDarkMode } = useSelector((state: RootState) => state.theme)
 
   return (
     <StyledButton

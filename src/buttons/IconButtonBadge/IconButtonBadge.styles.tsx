@@ -1,10 +1,9 @@
 import styled, { css } from 'styled-components/native'
-import { StyledBadgeProps, StyledTextProps, StyledWrapperProps } from './IconButtonBadge.types'
 import { Text } from '../../texts'
-import { View } from 'react-native'
+import { StyledComponentProps } from '../../types/StyledComponent'
 
-export const StyledBadge = styled.View<StyledBadgeProps>`
-  ${({ theme }: StyledBadgeProps) => css`
+export const StyledBadge = styled.View`
+  ${({ theme }: StyledComponentProps) => css`
     color: ${theme.colors.white};
     background: ${theme.colors.red};
     border-radius: ${theme.borderRadius.xl};
@@ -22,15 +21,15 @@ export const StyledBadge = styled.View<StyledBadgeProps>`
     align-items: center;
   `}
 `
-export const StyledText = styled(Text)<StyledTextProps>`
-  ${({ theme }: StyledTextProps) => css`
+export const StyledText = styled(Text)`
+  ${({ theme }: StyledComponentProps) => css`
     color: #ffffff;
     font-size: ${theme.fontSize.xxs};
     font-weight: 500;
   `}
 `
-export const StyledWrapper = styled(View)<StyledWrapperProps>`
-  ${({ theme }: StyledWrapperProps) => css`
+export const StyledWrapper = styled.View`
+  ${({ theme }: StyledComponentProps) => css`
     width: ${theme.size.std};
     height: ${theme.size.std};
     position: relative;

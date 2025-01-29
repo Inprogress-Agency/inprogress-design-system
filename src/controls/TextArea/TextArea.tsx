@@ -7,9 +7,9 @@ import {
   StyledWrapper,
 } from './TextArea.styles'
 import { useSelector } from 'react-redux'
-import { StoreTheme } from '../../../utils/Store/Theme/Theme.types'
 import { CopyButton } from '../../buttons'
 import { TextAreaProps } from './TextArea.types'
+import { RootState } from '../../types/RootState'
 
 const TextArea = ({
   value,
@@ -26,7 +26,7 @@ const TextArea = ({
     }
     return StyledTextInput
   }, [insideModal])
-  const { theme } = useSelector((state: StoreTheme) => state.theme)
+  const { theme } = useSelector((state: RootState) => state.theme)
 
   return (
     <StyledWrapper bgWhite={bgWhite}>

@@ -1,10 +1,10 @@
 import { css } from 'styled-components'
 import styled from 'styled-components/native'
-import { StyledButtonProps, StyledTitleProps } from './ArrowButton.types'
 import { Text } from '../../texts'
+import { StyledComponentProps } from '../../types/StyledComponent'
 
-export const StyledButton = styled.TouchableOpacity<StyledButtonProps>`
-  ${({ theme }: StyledButtonProps) => css`
+export const StyledButton = styled.TouchableOpacity`
+  ${({ theme }: StyledComponentProps) => css`
     background-color: ${theme.colors.grey1};
     border-radius: ${theme.borderRadius.l};
     padding: ${theme.space.std} ${theme.space.l};
@@ -14,8 +14,8 @@ export const StyledButton = styled.TouchableOpacity<StyledButtonProps>`
   `}
 `
 
-export const StyledIconWrapper = styled.View<StyledButtonProps>`
-  ${({ theme }: StyledButtonProps) => css`
+export const StyledIconWrapper = styled.View`
+  ${({ theme }: StyledComponentProps) => css`
     padding-right: ${theme.space.xs};
   `}
 `
@@ -27,7 +27,7 @@ export const StyledContent = styled.View`
 `
 
 export const StyledTitle = styled(Text)`
-  ${({ theme }: StyledTitleProps) => css`
+  ${({ theme }: StyledComponentProps) => css`
     font-size: ${theme.fontSize.std};
   `}
 `

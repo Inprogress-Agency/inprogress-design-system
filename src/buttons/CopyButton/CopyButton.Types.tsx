@@ -1,8 +1,5 @@
-import { Theme } from '../../types/Theme'
+import { StyledComponentProps } from '../../types/StyledComponent'
 
-/**
- * Button to copy a value
- */
 export interface CopyButtonProps {
   /**The value to copy */
   value: string
@@ -10,7 +7,6 @@ export interface CopyButtonProps {
   copyable: boolean
 }
 
-export interface StyledTextProps {
+export interface StyledTextProps extends StyledComponentProps {
   disabled: boolean
-  theme: Theme
 }

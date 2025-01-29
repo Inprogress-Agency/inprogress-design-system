@@ -1,9 +1,9 @@
 import styled, { css } from 'styled-components/native'
 import { StyledComponentProps } from '../../types/StyledComponent'
 import TextInput from '../TextInput/TextInput'
-import { TouchableOpacity, View } from 'react-native'
+import { Text } from '../../texts'
 
-export const StyledSearch = styled(View)`
+export const StyledSearch = styled.View`
   ${({ theme }: StyledComponentProps) => css`
     width: ${theme.size.fill};
     padding-left: ${theme.space.std};
@@ -16,7 +16,7 @@ export const StyledSearch = styled(View)`
   `}
 `
 
-export const StyledButton = styled(TouchableOpacity)`
+export const StyledButton = styled.TouchableOpacity`
   ${({ theme }: StyledComponentProps) => css`
     background: ${theme.colors.white};
     margin-right: ${theme.space.std};

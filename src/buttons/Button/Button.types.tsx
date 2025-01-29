@@ -1,7 +1,7 @@
 import { TouchableOpacityProps } from 'react-native'
-import { Theme } from '../../types/Theme'
 import { IconComponent } from '../../types/Icon'
 import { Color } from '../../types/Color'
+import { StyledComponentProps } from '../../types/StyledComponent'
 
 export type ButtonVariant = 'primary' | 'secondary'
 
@@ -36,17 +36,15 @@ export interface ButtonProps extends TouchableOpacityProps {
   color: Color | null
 }
 
-export interface StyledButtonProps {
+export interface StyledButtonProps extends StyledComponentProps {
   variant: ButtonVariant
   color: Color
   isDarkMode: boolean
   disabled: boolean
-  theme: Theme
 }
 
-export interface StyledTextProps {
+export interface StyledTextProps extends StyledComponentProps {
   variant: ButtonVariant
   color: Color
   isDarkMode: boolean
-  theme: Theme
 }

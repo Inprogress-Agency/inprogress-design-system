@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components/native'
 import { StyledCheckBoxProps } from './CheckBox.types'
 
-export const StyledCheckBox = styled.TouchableOpacity<StyledCheckBoxProps>`
+export const StyledCheckBox = styled.TouchableOpacity`
   ${({ theme, borderColor, notCheckedBackgroundColor, checked }: StyledCheckBoxProps) => css`
     justify-content: center;
     align-items: center;

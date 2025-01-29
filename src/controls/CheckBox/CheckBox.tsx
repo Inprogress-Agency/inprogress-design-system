@@ -1,9 +1,9 @@
 import React from 'react'
 import { LineTick } from '../../icons'
-import { StoreTheme } from '../../../utils/Store/Theme/Theme.types'
 import { useSelector } from 'react-redux'
 import { StyledCheckBox } from './CheckBox.styles'
 import { CheckBoxProps } from './CheckBox.types'
+import { RootState } from '../../types/RootState'
 
 const CheckBox = ({
   onValueChange,
@@ -13,7 +13,7 @@ const CheckBox = ({
   notCheckedBackgroundColor = null,
   ...props
 }: CheckBoxProps) => {
-  const { theme } = useSelector((state: { theme: StoreTheme }) => state.theme)
+  const { theme } = useSelector((state: RootState) => state.theme)
   return (
     <StyledCheckBox
       checked={value}

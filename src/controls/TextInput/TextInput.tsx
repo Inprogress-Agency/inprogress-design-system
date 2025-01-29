@@ -1,9 +1,9 @@
 import React, { useMemo } from 'react'
 import { Platform } from 'react-native'
 import { StyledBottomSheetTextInput, StyledTextInput } from './TextInput.styles'
-import { StoreTheme } from '../../../utils/Store/Theme/Theme.types'
 import { useSelector } from 'react-redux'
 import { TextInputProps } from './TextInput.types'
+import { RootState } from '../../types/RootState'
 
 const TextInput = ({
   value,
@@ -18,7 +18,7 @@ const TextInput = ({
     }
     return StyledTextInput
   }, [insideModal])
-  const { theme } = useSelector((state: { theme: StoreTheme }) => state.theme)
+  const { theme } = useSelector((state: RootState) => state.theme)
   return (
     <Input
       defaultValue={value}
