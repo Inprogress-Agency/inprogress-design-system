@@ -7,7 +7,7 @@ import { Color } from '../../types/Color'
  */
 export interface CheckBoxProps extends TouchableOpacityProps {
   /** Function called when value changes */
-  onValueChange: Function
+  onValueChange: (value: boolean) => void
   /** Current state of the checkbox */
   value: boolean
   /** Color of the checkbox icon */
