@@ -29,10 +29,8 @@ export const decorators = [
           <View style={styles.container}>
             <Translations />
             <PhoneMockup>
-              <GestureHandlerRootView>
-                <Story />
-                <Toast config={toastConfig} />
-              </GestureHandlerRootView>
+              <Story />
+              <Toast config={toastConfig} />
             </PhoneMockup>
             <Settings />
           </View>
