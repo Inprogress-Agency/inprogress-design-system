@@ -1039,6 +1039,13 @@
   dependencies:
     regenerator-runtime "^0.14.0"
 
+"@babel/runtime@^7.21.0":
+  version "7.26.7"
+  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.26.7.tgz#f4e7fe527cd710f8dc0618610b61b4b060c3c341"
+  integrity sha512-AOPI3D+a8dXnja+iwsUqGRjr1BbZIe771sXdapOtYI531gSqpi92vXivKcq2asu/DFpdl1ceFAKZyRzK2PCVcQ==
+  dependencies:
+    regenerator-runtime "^0.14.0"
+
 "@babel/template@^7.0.0", "@babel/template@^7.25.0", "@babel/template@^7.25.9":
   version "7.25.9"
   resolved "https://registry.yarnpkg.com/@babel/template/-/template-7.25.9.tgz#ecb62d81a8a6f5dc5fe8abfc3901fc52ddf15016"
@@ -1540,6 +1547,13 @@
     graceful-fs "^4.1.3"
     prompts "^2.4.2"
     semver "^7.5.2"
+
+"@react-native-community/datetimepicker@^7.1.0":
+  version "7.7.0"
+  resolved "https://registry.yarnpkg.com/@react-native-community/datetimepicker/-/datetimepicker-7.7.0.tgz#0d0162b0434c7b35883f8c5af846f35e23d045ec"
+  integrity sha512-nYzZy4DQLRFUzKJShWzRleCaebmCJfZ1lIcFmZgMXJoiVuGJNw3OIGHSWmHhPETh3OhP1RO3to882d7WmDIyrA==
+  dependencies:
+    invariant "^2.2.4"
 
 "@react-native/babel-plugin-codegen@0.76.5":
   version "0.76.5"
@@ -2220,6 +2234,11 @@
   dependencies:
     "@types/node" "*"
 
+"@types/dateformat@^5.0.3":
+  version "5.0.3"
+  resolved "https://registry.yarnpkg.com/@types/dateformat/-/dateformat-5.0.3.tgz#7e622b176c377592577a1393dace20320acf1039"
+  integrity sha512-hvskLa9ObgUwJe0rtfkyBbU+VIK8Ia3BACsxRsp4CPnyPBAOyIHbqImfBGFfaVVxn82wGx5SD8Twll6jMc/BaQ==
+
 "@types/doctrine@^0.0.9":
   version "0.0.9"
   resolved "https://registry.yarnpkg.com/@types/doctrine/-/doctrine-0.0.9.tgz#d86a5f452a15e3e3113b99e39616a9baa0f9863f"
@@ -2784,6 +2803,11 @@ better-opn@^3.0.2:
   integrity sha512-aVNobHnJqLiUelTaHat9DZ1qM2w0C0Eym4LPI/3JxOnSokGVdsl1T1kN7TFvsEAD8G47A6VKQ0TVHqbBnYMJlQ==
   dependencies:
     open "^8.0.4"
+
+bignumber.js@^9.0.1:
+  version "9.1.2"
+  resolved "https://registry.yarnpkg.com/bignumber.js/-/bignumber.js-9.1.2.tgz#b7c4242259c008903b13707983b5f4bbd31eda0c"
+  integrity sha512-2/mKyZH9K85bzOEfhXDBFZTGd1CTs+5IHpeFQo9luiBG7hghdC851Pj2WAhb6E3R6b9tZj/XKhbg4fum+Kepug==
 
 binary-extensions@^2.0.0:
   version "2.3.0"
@@ -3414,6 +3438,18 @@ data-view-byte-offset@^1.0.1:
     call-bound "^1.0.2"
     es-errors "^1.3.0"
     is-data-view "^1.0.1"
+
+date-fns@^2.30.0:
+  version "2.30.0"
+  resolved "https://registry.yarnpkg.com/date-fns/-/date-fns-2.30.0.tgz#f367e644839ff57894ec6ac480de40cae4b0f4d0"
+  integrity sha512-fnULvOpxnC5/Vg3NCiWelDsLiUc9bRwAPs/+LfTLNvetFCtCTN+yQz15C/fs4AwX1R9K5GLtLfn8QW+dWisaAw==
+  dependencies:
+    "@babel/runtime" "^7.21.0"
+
+dateformat@^5.0.3:
+  version "5.0.3"
+  resolved "https://registry.yarnpkg.com/dateformat/-/dateformat-5.0.3.tgz#fe2223eff3cc70ce716931cb3038b59a9280696e"
+  integrity sha512-Kvr6HmPXUMerlLcLF+Pwq3K7apHpYmGDVqrxcDasBg86UcKeTSNWbEzU8bwdXnxnR44FtMhJAxI4Bov6Y/KUfA==
 
 dayjs@^1.8.15:
   version "1.11.13"
@@ -6426,6 +6462,13 @@ react-native-gesture-handler@^2.14.0:
     "@egjs/hammerjs" "^2.0.17"
     hoist-non-react-statics "^3.3.0"
     invariant "^2.2.4"
+
+react-native-mask-text@^0.14.1:
+  version "0.14.2"
+  resolved "https://registry.yarnpkg.com/react-native-mask-text/-/react-native-mask-text-0.14.2.tgz#7c347d2c7dd1dcfceac9cfa9bf58f729bc1f537f"
+  integrity sha512-WP80f9y4+Kzg+TRmL3Qldp71iu0Sni3pCjyw90JvEM0r274iuWLZd+EylXtP2bYM/C5p1sZWvLstADYocdLGaA==
+  dependencies:
+    bignumber.js "^9.0.1"
 
 react-native-modal-datetime-picker@^14.0.0:
   version "14.0.1"
