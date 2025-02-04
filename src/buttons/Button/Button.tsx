@@ -1,4 +1,4 @@
-import { isBackgroundLight } from '../../../utils/Functions/isBackgroundLight'
+import { isBackgroundLight } from '../../utils/isBackgroundLight'
 import React from 'react'
 import { ActivityIndicator, View } from 'react-native'
 import { useSelector } from 'react-redux'

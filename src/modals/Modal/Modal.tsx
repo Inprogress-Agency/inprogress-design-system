@@ -23,7 +23,10 @@ import { useSelector } from 'react-redux'
 import { LineClose } from '../../icons'
 import { HeaderProps, ModalProps } from './Modal.types'
 import { Button } from '../../buttons'
-import { dimensions } from '../../../utils/Components/PhoneMockup'
+const PHONE_MOCKUP_DIMENSIONS = {
+  width: 318,
+  height: 659,
+}
 
 const Header = ({ header, onDismiss }: HeaderProps) => {
   const { theme } = useSelector((state: RootState) => state.theme)
@@ -39,7 +42,7 @@ const Header = ({ header, onDismiss }: HeaderProps) => {
   )
 }
 
-const { height } = Dimensions.get('window') || dimensions
+const { height } = Dimensions.get('window') || PHONE_MOCKUP_DIMENSIONS
 
 export const Modal = forwardRef(
   (

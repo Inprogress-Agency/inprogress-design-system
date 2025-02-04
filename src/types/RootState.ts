@@ -1,5 +1,7 @@
+import { Theme } from './Theme'
+
 interface ThemeState {
-  theme: any
+  theme: Theme
   isDarkMode: boolean
   isDeviceDarkMode: boolean
 }
