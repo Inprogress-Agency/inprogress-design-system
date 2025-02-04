@@ -9,6 +9,7 @@ import { LineClose, Search } from '../../icons'
 import { ButtonCloseProps, SearchBarProps } from './SearchBar.types'
 import { useSelector } from 'react-redux'
 import { RootState } from '../../types/RootState'
+import { View } from 'react-native'
 
 export const FakeSearchBar = memo(({ placeholder }: { placeholder: string }) => {
   return (
@@ -39,6 +40,7 @@ const SearchBar = ({
   onChange,
   autoFocus = false,
   insideModal = false,
+  renderCustomButton,
 }: SearchBarProps) => {
   return (
     <StyledSearch>
@@ -50,7 +52,11 @@ const SearchBar = ({
         autoFocus={autoFocus}
         insideModal={insideModal}
       />
-      <ResetButton value={value} onChange={onChange} />
+      {renderCustomButton ? (
+        renderCustomButton()
+      ) : (
+        <ResetButton value={value} onChange={onChange} />
+      )}
     </StyledSearch>
   )
 }
