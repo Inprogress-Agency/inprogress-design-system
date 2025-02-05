@@ -14,4 +14,20 @@ export default {
       confirm: 'Confirmer',
     },
   },
+  edit_profil: {
+    informations: {
+      hashtags: {
+        error1: 'Vous ne pouvez ajouter que 3 tags',
+        error2: 'Le tag doit contenir entre 3 et 24 caractères',
+        error3: 'Le tag existe déjà',
+      },
+    },
+  },
+  profilepage: {
+    galerie: {
+      edit_photo: {
+        add_hashtag: 'Ajouter un tag',
+      },
+    },
+  },
 }

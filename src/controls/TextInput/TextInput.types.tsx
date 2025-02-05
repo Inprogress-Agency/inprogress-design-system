@@ -7,18 +7,18 @@ export interface TextInputProps extends RNTextInputProps {
   /** Whether the input is inside a modal
    * @default false
    */
-  insideModal: boolean
+  insideModal?: boolean
   /** Whether the input should be disabled
    * @default false
    */
-  disabled: boolean
+  disabled?: boolean
   /** Whether the input has an error
    * @default null
    */
-  error: boolean | null
+  error?: boolean
 }
 
 export interface StyledTextInputProps extends StyledComponentProps {
-  disabled: boolean
-  error: boolean
+  disabled?: boolean
+  error?: boolean
 }
