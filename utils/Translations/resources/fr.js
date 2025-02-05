@@ -30,4 +30,15 @@ export default {
       },
     },
   },
+  security: {
+    codepin_modal: {
+      forgot: 'Oublié',
+      delete: 'Supprimer',
+      reset: {
+        title: 'Réinitialiser votre code PIN',
+        subtitle:
+          'En confirmant, vous recevrez un email qui vous permettra de réinitialiser votre code PIN.',
+      },
+    },
+  },
 }
