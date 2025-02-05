@@ -3,4 +3,15 @@ export default {
   toastText: {
     copy_Link: 'Copiado!',
   },
+  onboarding: {
+    birth_date: 'Fecha de nacimiento',
+    step2: {
+      optional: 'opcional',
+    },
+  },
+  modal: {
+    btn: {
+      confirm: 'Confirmar',
+    },
+  },
 }

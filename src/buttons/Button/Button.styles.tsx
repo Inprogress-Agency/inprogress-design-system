@@ -1,6 +1,6 @@
 import { StyledButtonProps, StyledTextProps } from './Button.types'
 import styled, { css } from 'styled-components/native'
-import { isBackgroundLight } from '../../../utils/Functions/isBackgroundLight'
+import { isBackgroundLight } from '../../utils/isBackgroundLight'
 import { Text } from '../../texts'
 
 export const StyledButton = styled.TouchableOpacity`

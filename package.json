@@ -1,6 +1,6 @@
 {
   "name": "design-system",
-  "version": "0.0.22",
+  "version": "0.0.33",
   "homepage": "https://inprogress-agency.github.io/inprogress-design-system",
   "license": "MIT",
   "main": "dist/index.js",
@@ -39,6 +39,16 @@
       "import": "./dist/modals/index.js",
       "require": "./dist/modals/index.js",
       "default": "./dist/modals/index.js"
+    },
+    "./utils": {
+      "import": "./dist/utils/index.js",
+      "require": "./dist/utils/index.js",
+      "default": "./dist/utils/index.js"
+    },
+    "./types": {
+      "import": "./dist/types/index.js",
+      "require": "./dist/types/index.js",
+      "default": "./dist/types/index.js"
     }
   },
   "react-native": {
@@ -47,10 +57,16 @@
     "./icons": "./dist/icons/index.js",
     "./texts": "./dist/texts/index.js",
     "./controls": "./dist/controls/index.js",
-    "./modals": "./dist/modals/index.js"
+    "./modals": "./dist/modals/index.js",
+    "./utils": "./dist/utils/index.js",
+    "./types": "./dist/types/index.js"
   },
   "dependencies": {
-    "@gorhom/bottom-sheet": "^5.0.6"
+    "@gorhom/bottom-sheet": "^5.0.6",
+    "@react-native-community/datetimepicker": "^7.1.0",
+    "date-fns": "^2.30.0",
+    "dateformat": "^5.0.3",
+    "react-native-mask-text": "^0.14.1"
   },
   "peerDependencies": {
     "@react-native-clipboard/clipboard": "^1.11.1",
@@ -85,6 +101,7 @@
     "@storybook/react-webpack5": "^8.4.7",
     "@storybook/theming": "^8.4.7",
     "@svgr/cli": "^5.5.0",
+    "@types/dateformat": "^5.0.3",
     "@types/styled-components": "^5.1.34",
     "@types/styled-components-react-native": "^5.2.5",
     "babel-loader": "^9.2.1",

@@ -9,8 +9,18 @@
     "esModuleInterop": true,
     "skipLibCheck": true,
     "allowSyntheticDefaultImports": true,
-    "allowJs": true
+    "allowJs": true,
+    "resolveJsonModule": true,
+    "moduleResolution": "node"
   },
-  "include": ["src/**/*", "src/**/*.js", "src/**/*.ts", "src/**/*.tsx", "src/**/*.jsx"],
+  "include": [
+    "src/**/*",
+    "src/**/*.js",
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "src/**/*.jsx",
+    "src/**/*.json",
+    "src/**/*.svg"
+  ],
   "exclude": ["node_modules", "dist", "stories", ".storybook"]
 }
