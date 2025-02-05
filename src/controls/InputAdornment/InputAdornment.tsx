@@ -4,10 +4,10 @@ import { StyledIcon, StyledInputAdornment } from './InputAdornment.styles'
 import { InputAdornmentProps } from './InputAdornment.types'
 
 const InputAdornment = ({
-  adornment = null,
-  childrenClassName = null,
+  adornment,
+  childrenClassName,
   children,
-  error = null,
+  error,
   ...props
 }: InputAdornmentProps) => {
   const renderAdornment = useCallback(() => {
