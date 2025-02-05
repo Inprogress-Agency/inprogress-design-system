@@ -4,14 +4,14 @@ import { TextInputProps } from '../TextInput/TextInput.types'
 
 export interface InputAdornmentProps extends TextInputProps {
   /** Icon to display in the input */
-  adornment: IconComponent | null
+  adornment?: IconComponent
   /** Class name to apply to the children */
-  childrenClassName: string | null
+  childrenClassName?: string
   /** Whether the input has an error */
-  error: boolean | null
+  error?: boolean
 }
 
 export interface StyledInputAdornmentProps extends StyledComponentProps {
-  error: boolean | null
-  adornment: IconComponent | null
+  error?: boolean
+  adornment?: IconComponent
 }
