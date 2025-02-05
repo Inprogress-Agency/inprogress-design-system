@@ -22,10 +22,14 @@ export interface SearchBarProps {
    * If true, the input will be focused when the component is mounted
    * @default false
    */
-  autoFocus: boolean
+  autoFocus?: boolean
   /**
    * Wether the input is inside a modal
    * @default false
    */
-  insideModal: boolean
+  insideModal?: boolean
+  /**
+   * Custom button to render in the right side of the input
+   */
+  renderCustomButton?: () => React.ReactNode
 }
