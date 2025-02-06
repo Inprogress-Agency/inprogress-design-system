@@ -30,4 +30,15 @@ export default {
       },
     },
   },
+  security: {
+    codepin_modal: {
+      forgot: 'Forgotten',
+      delete: 'Delete',
+      reset: {
+        title: 'Reset your pin code',
+        subtitle:
+          'By confirming, you will receive an email that will allow you to reset your PIN code.',
+      },
+    },
+  },
 }
