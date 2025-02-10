@@ -11,7 +11,7 @@ type Story = StoryObj<typeof ColorPicker>
 
 export const Overview: Story = {
   args: {
-    value: '#000',
-    autoCapitalize: 'none',
+    title: 'Color',
+    value: '#000000',
   },
 }
