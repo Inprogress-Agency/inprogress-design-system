@@ -2,16 +2,19 @@ import type { Meta, StoryObj } from '@storybook/react'
 import { Slider } from '../../../src/controls'
 import { LineShoppingCart } from '../../../src/icons'
 import React, { useState } from 'react'
+import { generateParameters } from '../../../utils/generateMeta/generateParameters'
+import { generateArgTypes } from '../../../utils/generateMeta/generateArgTypes'
 
 const meta: Meta<typeof Slider> = {
   title: 'Controls/Slider',
   component: Slider,
+  parameters: generateParameters(Slider),
+  argTypes: generateArgTypes(Slider),
 }
 
 export default meta
-type Story = StoryObj<typeof Slider>
 
-export const Overview: Story = {
+export const Overview: StoryObj<typeof Slider> = {
   args: {
     value: 0,
   },

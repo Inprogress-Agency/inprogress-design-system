@@ -26,11 +26,11 @@ export interface DatePickerButtonProps {
 export interface DateFieldProps {
   value: PickerValue
   onChangeText?: ({ isError, value }: PickerValue) => void
-  adornment?: IconComponent | null | undefined
+  adornment?: IconComponent
   title: string
 }
 
 export interface StyledWrapperProps extends StyledComponentProps {
-  adornment: IconComponent | null
+  adornment?: IconComponent
   error: boolean
 }

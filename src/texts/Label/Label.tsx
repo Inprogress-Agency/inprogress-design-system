@@ -7,8 +7,8 @@ import { RootState } from '../../types/RootState'
 import Text from '../Text/Text'
 
 const Label = ({
-  color = null,
-  children,
+  color,
+  children = '',
   optional = false,
   containerProps = {},
   ...props

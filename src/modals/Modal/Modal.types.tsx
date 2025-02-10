@@ -18,7 +18,7 @@ export interface ModalProps {
   /**
    * Custom header component
    */
-  header?: ReactNode | null
+  header?: ReactNode
   /**
    * Title of the modal
    */

@@ -3,7 +3,7 @@ import { Color } from '../../types/Color'
 import { StyledComponentProps } from '../../types/StyledComponent'
 
 /**
- * Checkbox component
+ * @see {@link TouchableOpacityProps} from react-native
  */
 export interface CheckBoxProps extends TouchableOpacityProps {
   /** Function called when value changes */
@@ -11,11 +11,11 @@ export interface CheckBoxProps extends TouchableOpacityProps {
   /** Current state of the checkbox */
   value: boolean
   /** Color of the checkbox icon */
-  color: Color | null
+  color?: Color
   /** Color of the checkbox border */
-  borderColor: Color | null
+  borderColor?: Color
   /** Background color when checkbox is not checked */
-  notCheckedBackgroundColor: Color | null
+  notCheckedBackgroundColor?: Color
 }
 
 export interface StyledCheckBoxProps extends StyledComponentProps {

@@ -1,42 +1,18 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import { Switch } from '../../../src/controls'
+import { generateParameters } from '../../../utils/generateMeta/generateParameters'
+import { generateArgTypes } from '../../../utils/generateMeta/generateArgTypes'
 
 const meta: Meta<typeof Switch> = {
   title: 'Controls/Switch',
   component: Switch,
-  argTypes: {
-    value: {
-      control: {
-        type: 'boolean',
-      },
-    },
-    activeThumbColor: {
-      control: {
-        type: 'color',
-      },
-    },
-    thumbColor: {
-      control: {
-        type: 'color',
-      },
-    },
-    trackColor: {
-      control: {
-        type: 'color',
-      },
-    },
-    disabled: {
-      control: {
-        type: 'boolean',
-      },
-    },
-  },
+  argTypes: generateArgTypes(Switch),
+  parameters: generateParameters(Switch),
 }
 
 export default meta
-type Story = StoryObj<typeof Switch>
 
-export const Overview: Story = {
+export const Overview: StoryObj<typeof Switch> = {
   args: {
     value: false,
   },

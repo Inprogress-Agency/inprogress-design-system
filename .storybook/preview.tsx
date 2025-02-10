@@ -4,7 +4,6 @@ import { Provider } from 'react-redux'
 import { store } from '../utils/Store'
 import { StyleSheet, View } from 'react-native'
 import Toast from 'react-native-toast-message'
-import { GestureHandlerRootView } from 'react-native-gesture-handler'
 import PhoneMockup from '../utils/Components/PhoneMockup'
 import ThemeProvider from '../utils/Components/ThemeProvider'
 import Settings from '../utils/Components/Settings/Settings'
@@ -51,4 +50,5 @@ export const parameters = {
   docs: {
     theme: storybookTheme,
   },
+  viewMode: 'docs',
 }

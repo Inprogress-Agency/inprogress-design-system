@@ -1,20 +1,19 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import { InputAdornment } from '../../../src/controls'
 import { LineArrowRight } from '../../../src/icons'
-import { iconOptionsWithNull } from '../../../utils/argTypesOptions/icon'
+import { generateParameters } from '../../../utils/generateMeta/generateParameters'
+import { generateArgTypes } from '../../../utils/generateMeta/generateArgTypes'
 
 const meta: Meta<typeof InputAdornment> = {
   title: 'Controls/InputAdornment',
   component: InputAdornment,
-  argTypes: {
-    adornment: iconOptionsWithNull,
-  },
+  parameters: generateParameters(InputAdornment),
+  argTypes: generateArgTypes(InputAdornment),
 }
 
 export default meta
-type Story = StoryObj<typeof InputAdornment>
 
-export const Overview: Story = {
+export const Overview: StoryObj<typeof InputAdornment> = {
   args: {
     value: 'Hello world',
     adornment: () => LineArrowRight({ size: 16 }),

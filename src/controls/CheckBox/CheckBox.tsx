@@ -8,9 +8,9 @@ import { RootState } from '../../types/RootState'
 const CheckBox = ({
   onValueChange,
   value,
-  color = null,
-  borderColor = null,
-  notCheckedBackgroundColor = null,
+  color,
+  borderColor,
+  notCheckedBackgroundColor,
   ...props
 }: CheckBoxProps) => {
   const { theme } = useSelector((state: RootState) => state.theme)

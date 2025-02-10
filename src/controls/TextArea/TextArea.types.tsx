@@ -11,29 +11,29 @@ export interface TextAreaProps {
    * Reference to the input component
    * @default null
    */
-  inputRef: React.RefObject<TextInputProps> | React.RefObject<BottomSheetTextInputProps> | null
+  inputRef?: React.RefObject<TextInputProps> | React.RefObject<BottomSheetTextInputProps> | null
   /**
    * Whether the text area is inside a modal
    * @default false
    */
-  insideModal: boolean
+  insideModal?: boolean
   /**
    * Whether the text area is copyable
    * @default false
    */
-  copyable: boolean
+  copyable?: boolean
   /**
    * Whether the text area has a white background
    * If false, the text area will have a grey background
    * @default false
    */
-  bgWhite: boolean
+  bgWhite?: boolean
   /**
    * Maximum length of the text area
    * If set to 0, the text area will not show the maximum length
    * @default 0
    */
-  maxLength: number
+  maxLength?: number
 }
 
 export interface StyledWrapperProps extends StyledComponentProps {
