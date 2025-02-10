@@ -9,11 +9,11 @@ export interface ButtonProps extends TouchableOpacityProps {
   /** Icon to display before the text
    * @default null
    */
-  icon?: IconComponent | null
+  icon?: IconComponent
   /** Icon to display after the text
    * @default null
    */
-  afterIcon?: IconComponent | null
+  afterIcon?: IconComponent
   /** Text to display on the button
    * @default ''
    */
@@ -33,7 +33,7 @@ export interface ButtonProps extends TouchableOpacityProps {
   /** Color of the button
    * @default theme.colors.primary
    */
-  color?: Color | null
+  color?: Color
 }
 
 export interface StyledButtonProps extends StyledComponentProps {

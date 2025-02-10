@@ -1,26 +1,17 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import { Label } from '../../../src/texts'
+import { generateParameters } from '../../../utils/generateMeta/generateParameters'
+import { generateArgTypes } from '../../../utils/generateMeta/generateArgTypes'
 
 const meta: Meta<typeof Label> = {
   title: 'Texts/Label',
   component: Label,
-  argTypes: {
-    color: {
-      control: {
-        type: 'color',
-      },
-    },
-    optional: {
-      control: {
-        type: 'boolean',
-      },
-    },
-  },
+  parameters: generateParameters(Label),
+  argTypes: generateArgTypes(Label),
 }
 
 export default meta
-type Story = StoryObj<typeof Label>
 
-export const Overview = {
+export const Overview: StoryObj<typeof Label> = {
   args: { children: 'Exemple', optional: true },
 }

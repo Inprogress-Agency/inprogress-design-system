@@ -9,7 +9,7 @@ export interface LabelProps {
   /**
    * The text displayed in the label
    */
-  children: string
+  children?: string
   /**
    * The props of the container
    * @example

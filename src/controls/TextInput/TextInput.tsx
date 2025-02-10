@@ -5,7 +5,13 @@ import { useSelector } from 'react-redux'
 import { TextInputProps } from './TextInput.types'
 import { RootState } from '../../types/RootState'
 
-const TextInput = ({ value, insideModal, disabled, error, ...props }: TextInputProps) => {
+const TextInput = ({
+  value = '',
+  insideModal = false,
+  disabled = false,
+  error = false,
+  ...props
+}: TextInputProps) => {
   const Input = useMemo(() => {
     if (insideModal) {
       return StyledBottomSheetTextInput

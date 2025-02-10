@@ -1,4 +1,5 @@
 import type { StorybookConfig } from '@storybook/react-webpack5'
+import path from 'path'
 
 const config: StorybookConfig = {
   framework: {
@@ -14,7 +15,7 @@ const config: StorybookConfig = {
         'react-native$': 'react-native-web',
         'react-native-svg': 'react-native-svg-web',
       }
-      config.resolve.extensions = ['.web.js', '.js', '.web.tsx', '.tsx', '.web.ts', '.ts']
+      config.resolve.extensions = ['.tsx', '.ts', '.web.js', '.js', '.jsx', '.json', '.web.tsx']
     }
 
     if (config.module?.rules) {
@@ -57,12 +58,7 @@ const config: StorybookConfig = {
     autodocs: true,
   },
   typescript: {
-    check: false,
-    reactDocgen: 'react-docgen-typescript',
-    reactDocgenTypescriptOptions: {
-      shouldExtractLiteralValuesFromEnum: true,
-      propFilter: () => true,
-    },
+    reactDocgen: 'react-docgen',
   },
 }
 
