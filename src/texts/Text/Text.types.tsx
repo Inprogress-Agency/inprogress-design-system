@@ -10,7 +10,7 @@ export interface TextProps extends RNTextProps {
   /** Color of the text if not defined, use theme.colors.black
    * @default null
    */
-  color?: Color | null
+  color?: Color
   /** Size of the text
    * @default 14
    */

@@ -1,19 +1,21 @@
-import type { Meta, StoryObj } from '@storybook/react'
+import type { Meta } from '@storybook/react'
 import { Select } from '../../../src/controls'
 import React, { useState } from 'react'
 import { DefaultSelect } from '../../../src/controls/Select/Select'
+import { generateParameters } from '../../../utils/generateMeta/generateParameters'
+import { generateArgTypes } from '../../../utils/generateMeta/generateArgTypes'
 
 const meta: Meta<typeof Select> = {
   title: 'Controls/Select',
   component: Select,
+  parameters: generateParameters(Select),
+  argTypes: generateArgTypes(Select),
 }
 
 export default meta
-type Story = StoryObj<typeof Select>
 
 export const Overview = () => {
   const [selected, setSelected] = useState<string>('orange')
-
   return (
     <DefaultSelect
       variant="primary"

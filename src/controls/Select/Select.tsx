@@ -13,7 +13,7 @@ import { LineArrowBottom } from '../../icons'
 const Select = ({
   initialValue,
   title = 'select_value',
-  options = [],
+  options,
   onChange,
   children,
   ...props
