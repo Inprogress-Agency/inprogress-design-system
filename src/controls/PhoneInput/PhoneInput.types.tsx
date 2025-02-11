@@ -4,9 +4,16 @@ export interface StyledText extends StyledComponentProps{
   label: string
 }
 
-export interface PhoneInputProps {
+export interface PhoneInputProps extends StyledComponentProps {
   label: string,
-  value: (number: '', code: '') => void,
-  onChange: (value: string) => void
+  value: {
+    number: string;
+    code: [string, string];
+  };
+  onChange: (val: { number: string; code: [string, string] }) => void;
+
 }
+
+
+
 

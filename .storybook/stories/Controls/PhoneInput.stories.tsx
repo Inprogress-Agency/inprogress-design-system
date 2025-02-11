@@ -12,6 +12,6 @@ type Story = StoryObj<typeof PhoneInput>
 
 export const Overview: Story = {
   args: {
-    value: 'Hello world',
+    value: {number:'0612345678', code: ['FR', '+33']},
   },
 }
