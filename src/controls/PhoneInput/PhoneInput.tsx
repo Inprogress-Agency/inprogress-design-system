@@ -6,7 +6,8 @@ import { PhoneInputProps } from './PhoneInput.types'
 import { useSelector } from 'react-redux'
 import { RootState } from '../../types/RootState'
 import { useTranslation } from 'react-i18next'
-import { StyleSheet } from 'react-native'
+import { Platform, StyleSheet } from 'react-native'
+import { Country } from 'react-native-country-picker-modal'
 
 const PhoneInput = ({
   label = 'phone_input.title',
@@ -47,6 +48,7 @@ const PhoneInput = ({
   return (
     <>
       <StyledText>{t(label)}</StyledText>
+      {/* @ts-ignore */}
       <RNPhoneInput
         {...props}
         ref={phoneInput}
@@ -56,7 +58,7 @@ const PhoneInput = ({
         onChangeText={(phoneNumber: string) => {
           onChange({ ...value, number: phoneNumber })
         }}
-        onChangeCountry={(country: { cca2: string; callingCode: string[] }) => {
+        onChangeCountry={(country: Country) => {
           onChange({
             ...value,
             code: [country.cca2, `+${country.callingCode[0]}`],
