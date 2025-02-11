@@ -30,4 +30,7 @@ export default {
       },
     },
   },
+  phone_input: {
+    title: 'Value',
+  },
 }
