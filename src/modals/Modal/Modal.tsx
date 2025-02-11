@@ -48,14 +48,14 @@ export const Modal = forwardRef(
   (
     {
       closable = false,
-      header = null,
+      header,
       title = '',
       subtitle = '',
-      footer = null,
+      footer,
       actions = [],
       loading = false,
       fullscreen = false,
-      children = null,
+      children,
       enablePanDownToClose = true,
       enableBackdropClose = true,
       scrollEnabled = true,

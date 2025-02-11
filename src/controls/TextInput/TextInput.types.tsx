@@ -3,7 +3,7 @@ import { TextInputProps as RNTextInputProps } from 'react-native'
 
 export interface TextInputProps extends RNTextInputProps {
   /** Text to display in the input */
-  value: string
+  value?: string
   /** Whether the input is inside a modal
    * @default false
    */
@@ -13,7 +13,7 @@ export interface TextInputProps extends RNTextInputProps {
    */
   disabled?: boolean
   /** Whether the input has an error
-   * @default null
+   * @default false
    */
   error?: boolean
 }
