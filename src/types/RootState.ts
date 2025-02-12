@@ -10,7 +10,12 @@ interface LanguageState {
   lang: string
 }
 
+interface UserState {
+  currentUser: { uid: string } | null
+}
+
 export interface RootState {
   theme: ThemeState
   language: LanguageState
+  user: UserState
 }

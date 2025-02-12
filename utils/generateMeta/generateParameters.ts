@@ -2,16 +2,15 @@ import { DocgenComponent } from './DocgenComponent'
 
 export const generateParameters = (component: DocgenComponent) => {
   const info = component.__docgenInfo
-  console.log('info:', info)
-
-  if (info?.composes?.length) {
-    return {
-      docs: {
-        description: {
-          component: `\n\n**Extends :** \`${info.composes.join(', ')}\``,
-        },
+  const formattedDescription = info?.description ? `**Description :** ${info?.description}\n\n` : ''
+  const formattedComposes = info?.composes?.length
+    ? `**Extends :** ${info?.composes?.map(comp => `\`${comp}\``).join(', ')}\n\n`
+    : ''
+  return {
+    docs: {
+      description: {
+        component: `${formattedComposes}${formattedDescription}`,
       },
-    }
+    },
   }
-  return {}
 }

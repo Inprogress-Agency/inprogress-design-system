@@ -4,5 +4,6 @@ export type DocgenComponent = ComponentType<any> & {
   __docgenInfo?: {
     props?: any
     composes?: string[]
+    description?: string
   }
 }
