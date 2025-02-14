@@ -11,9 +11,8 @@ import {
 } from './TabBarButton.styles'
 import { TouchableOpacity, GestureResponderEvent } from 'react-native'
 import { ViewStyle } from 'react-native'
-import { useScrollToTopContext } from '../../contexts/ScrollToTopContext/ScrollToTopContext'
+import { useScrollToTopContext } from '../../contexts'
 import { NavigationProp, useNavigation } from '@react-navigation/native'
-import { RootStackParamList } from '../AuthTopNavigationBar/AuhtTopNavigationBar.types'
 
 const TabBarButton = memo(({ tab, focused, index }: TabBarButtonProps) => {
   const { theme } = useSelector((state: RootState) => state.theme)

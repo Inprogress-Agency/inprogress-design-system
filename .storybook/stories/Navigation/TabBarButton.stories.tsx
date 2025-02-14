@@ -5,7 +5,7 @@ import TabBarButton from '../../../src/navigation/TabBarButton/TabBarButton'
 import { LineHome } from '../../../src/icons'
 import { View } from 'react-native'
 import React from 'react'
-import { ScrollToTopProvider } from '../../../src/contexts/ScrollToTopContext/ScrollToTopContext'
+import { ScrollToTopProvider } from '../../../src/contexts'
 import { NavigationContainer } from '@react-navigation/native'
 
 const meta: Meta<typeof TabBarButton> = {

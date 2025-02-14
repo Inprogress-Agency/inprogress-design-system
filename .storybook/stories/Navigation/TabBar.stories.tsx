@@ -5,7 +5,7 @@ import { generateParameters } from '../../../utils/generateMeta/generateParamete
 import { NavigationContainer } from '@react-navigation/native'
 import { View } from 'react-native'
 import { TabBar } from '../../../src/navigation'
-import { ScrollToTopProvider } from '../../../src/contexts/ScrollToTopContext/ScrollToTopContext'
+import { ScrollToTopProvider } from '../../../src/contexts'
 import { LineHome, LineSearch, LineUser } from '../../../src/icons'
 
 const meta: Meta<typeof TabBar> = {

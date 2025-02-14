@@ -3,7 +3,7 @@ import { ViewProps } from 'react-native'
 import Animated, { useAnimatedStyle, withSpring } from 'react-native-reanimated'
 import { StyledBottomBar, StyledFakeBottomBar } from './TabBar.styles'
 import { CustomTabBarProps } from './TabBar.types'
-import { useScrollToTopContext } from '../../contexts/ScrollToTopContext/ScrollToTopContext'
+import { useScrollToTopContext } from '../../contexts'
 import TabBarButton from '../TabBarButton/TabBarButton'
 
 const AnimatedBottomBar = Animated.createAnimatedComponent(StyledBottomBar) as React.ComponentType<
