@@ -1,2 +1,5 @@
 export { default as TopNavigationBar } from './TopNavigationBar/TopNavigationBar'
 export { default as AuthTopNavigationBar } from './AuthTopNavigationBar/AuthTopNavigationBar'
+export { default as TabBarButton } from './TabBarButton/TabBarButton'
+export { default as TabBar } from './TabBar/TabBar'
+export { default as TabNavigator } from './TabNavigator/TabNavigator'
