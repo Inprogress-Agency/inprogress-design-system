@@ -2,50 +2,23 @@
 
 ## Description
 
-Ce projet est un système de design (design system) développé pour InProgress Agency. Il s'agit d'une bibliothèque de composants React Native qui comprend :
-
-- 🔘 Buttons : Une collection de composants boutons
-
-- 🎨 Icons : Un ensemble d'icônes SVG optimisées pour React Native
-
-- 📝 Texts : Des composants textuels standardisés
-
-## Caractéristiques Techniques
-
-- Compatible avec React Native et React Native Web
-
-- Support complet de TypeScript
-
-- Intégration avec Storybook pour la documentation des composants
-
-- Gestion des SVG optimisée avec SVGR
-
-- Support multilingue (i18n)
-
-- Système de thèmes avec styled-components
+Ce projet est un système de design développé pour InProgress Agency. Il s'agit d'une bibliothèque de composants React Native.
 
 ## Installation
 
-Le package est disponible comme dépendance npm avec les peer dependencies suivantes :
+**Versions requises :**
 
 - React 18.2.0+
-
 - React Native 0.72.4+
 
-- React Native Gesture Handler
+**Installez les dépendances avec la commande suivante:**
 
-- React Native SVG
-
-- React Native Toast Message
-
-- React Native Clipboard
+```bash
+yarn add @gorhom/bottom-sheet @miblanchard/react-native-slider @react-native-clipboard/clipboard @react-native-community/datetimepicker @react-navigation/bottom-tabs @react-navigation/native date-fns dateformat deep-equal react-native-confirmation-code-field react-native-gesture-handler react-native-mask-text react-native-phone-number-input react-native-portalize react-native-reanimated react-native-safe-area-context react-native-screens react-native-svg react-native-toast-message
+```
 
 ## Documentation
 
 📚 La documentation complète et les exemples de composants sont disponibles sur :
 
 https://inprogress-agency.github.io/inprogress-design-system
-
-## Version
-
-Version actuelle : 0.0.22
