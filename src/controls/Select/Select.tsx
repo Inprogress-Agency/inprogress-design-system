@@ -82,7 +82,6 @@ const DefaultButton = forwardRef(
     return (
       <StyledTouchableOpacity
         onPress={() => {
-          console.log(ref)
           disabled ? null : (ref as React.RefObject<BottomSheetModal>).current?.present()
         }}
         variant={variant}
