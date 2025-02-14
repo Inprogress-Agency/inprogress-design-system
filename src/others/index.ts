@@ -1,1 +1,1 @@
-export { default as RedBadge } from './RedBadge/RedBadge'
+export { default as SettingBloc } from './SettingBloc/SettingBloc'
