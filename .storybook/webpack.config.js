@@ -9,6 +9,7 @@ module.exports = ({ config }) => {
       'react-native$': 'react-native-web',
       'react-native-color-matrix-image-filters': 'react-native-web',
       'react/jsx-runtime': require.resolve('react/jsx-runtime'),
+      'react-native-linear-gradient': 'react-native-web-linear-gradient',
     },
     extensions: ['.web.js', '.web.tsx', '.web.ts', '.web.jsx', '.js', '.jsx', '.tsx', '.ts'],
     fallback: {
