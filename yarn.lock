@@ -3127,11 +3127,6 @@ cjs-module-lexer@^1.2.3:
   resolved "https://registry.yarnpkg.com/cjs-module-lexer/-/cjs-module-lexer-1.4.3.tgz#0f79731eb8cfe1ec72acd4066efac9d61991b00d"
   integrity sha512-9z8TZaGM1pfswYeXrUpzPrkx8UnWYdhJclsiYMm6x/w5+nN+8Tf/LnAgfLGQCm59qAOxU8WwHEq2vNwF6i4j+Q==
 
-clamp@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/clamp/-/clamp-1.0.1.tgz#66a0e64011816e37196828fdc8c8c147312c8634"
-  integrity sha512-kgMuFyE78OC6Dyu3Dy7vcx4uy97EIbVxJB/B0eJ3bUNAkwdNcxYzgKltnyADiYwsR7SEqkkUPsEUT//OVS6XMA==
-
 clean-css@^5.2.2:
   version "5.3.3"
   resolved "https://registry.yarnpkg.com/clean-css/-/clean-css-5.3.3.tgz#b330653cd3bd6b75009cc25c714cae7b93351ccd"
@@ -3301,13 +3296,6 @@ compression@^1.7.1:
     on-headers "~1.0.2"
     safe-buffer "5.2.1"
     vary "~1.1.2"
-
-concat-color-matrices@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/concat-color-matrices/-/concat-color-matrices-1.0.0.tgz#7d77baa4148264806d4318d9a2378e7dec4bc413"
-  integrity sha512-K0IMtl4m9LcHg4vVFb40Txmie/GwCJBkquGSn6wtA9yIcszzFZgGc6co4sSnjFdqeJAv+q2LrCHMUSb2GHAChA==
-  dependencies:
-    invariant "^2.2.4"
 
 concat-map@0.0.1:
   version "0.0.1"
@@ -6601,16 +6589,7 @@ react-is@^18.0.0:
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-18.3.1.tgz#e83557dc12eae63a99e003a46388b1dcbb44db7e"
   integrity sha512-/LLMVyas0ljjAtoYiPqYiL8VWXzUUdThrmU5+n20DZv+a+ClRoevUzw5JxU+Ieh5/c87ytoTBV9G1FiKfNJdmg==
 
-react-native-color-matrix-image-filters@^7.0.1:
-  version "7.0.2"
-  resolved "https://registry.yarnpkg.com/react-native-color-matrix-image-filters/-/react-native-color-matrix-image-filters-7.0.2.tgz#8036d20ed629501f2424039ea36563564552f78d"
-  integrity sha512-YwEbSbzwpD99v8KNiebLB5NymY9hPBQQJ778QN2/39YZ/tA9TbFA3M3qv4kU2qyF+Tdon6KbFOd7D7zaAXUhSA==
-  dependencies:
-    concat-color-matrices "^1.0.0"
-    rn-color-matrices "^4.1.0"
-    ts-tiny-invariant "^2.0.5"
-
-react-native-confirmation-code-field@^7.4.0:
+react-native-confirmation-code-field@^7.3.2:
   version "7.4.0"
   resolved "https://registry.yarnpkg.com/react-native-confirmation-code-field/-/react-native-confirmation-code-field-7.4.0.tgz#58cc2d5adad59882d1805bf164cd6099d432d21e"
   integrity sha512-Kw7rD0RXi6vZnt0Y67nkSW2wYmZFdnxJ23yxkKm3jqwvSxAvaA1NP3h3MHSPmJd25l0WK/+fjXOeCliDqWZ9rw==
@@ -6968,13 +6947,6 @@ rimraf@~2.6.2:
   integrity sha512-mwqeW5XsA2qAejG46gYdENaxXjx9onRNCfn7L0duuP4hCuTIi/QO7PDK07KJfp1d+izWPrzEJDcSqBa0OZQriA==
   dependencies:
     glob "^7.1.3"
-
-rn-color-matrices@^4.1.0:
-  version "4.1.0"
-  resolved "https://registry.yarnpkg.com/rn-color-matrices/-/rn-color-matrices-4.1.0.tgz#9ac5ce3d7daaf33d336b877508649469cb39f8a5"
-  integrity sha512-a8++z3Zi4GhA0oWwKS3etdrVuVQ2q/ByTMh6lMxo+vaSv3SRSSg5SzpZk65GS0NCAqMhFT8WSvgSgNhO/F+xag==
-  dependencies:
-    clamp "^1.0.1"
 
 run-parallel@^1.1.9:
   version "1.2.0"
@@ -7606,11 +7578,6 @@ ts-dedent@^2.0.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/ts-dedent/-/ts-dedent-2.2.0.tgz#39e4bd297cd036292ae2394eb3412be63f563bb5"
   integrity sha512-q5W7tVM71e2xjHZTlgfTDoPF/SmqKG5hddq9SzR49CH2hayqRKJtQ4mtRlSxKaJlR/+9rEM+mnBHf7I2/BQcpQ==
-
-ts-tiny-invariant@^2.0.5:
-  version "2.0.5"
-  resolved "https://registry.yarnpkg.com/ts-tiny-invariant/-/ts-tiny-invariant-2.0.5.tgz#20888046ede981edcddb77615a5f6e3c1ffb0901"
-  integrity sha512-NGQzWRLGLMjOUTpsxMSRj63fuFBC8HV8L4NUxzDVgU4MFeOt3qFI2534M5L+ch22x53oDEwPaRBPXgAfRjcXHA==
 
 tsconfig-paths@^4.2.0:
   version "4.2.0"
