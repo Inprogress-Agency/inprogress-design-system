@@ -169,7 +169,8 @@
     "react-native-phone-number-input": "^2.1.0",
     "react-native-confirmation-code-field": "^7.3.2",
     "@react-native-clipboard/clipboard": "^1.11.1",
-    "react-native-toast-message": "^2.1.5"
+    "react-native-toast-message": "^2.1.5",
+    "react-native-color-matrix-image-filters": "^7.0.1"
   },
   "scripts": {
     "build": "rimraf dist && tsc",

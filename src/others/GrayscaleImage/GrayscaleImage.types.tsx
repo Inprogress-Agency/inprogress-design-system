@@ -1,13 +1,12 @@
-import { ImageProps, ImageSourcePropType } from 'react-native'
+import { ImageProps } from 'react-native'
 
-export interface GrayscaleImageProps extends Omit<ImageProps, 'source'> {
+export interface GrayscaleImageProps extends ImageProps {
   /**
-   * Active/Désactive le filtre en niveaux de gris
+   * Wether the image should be grayscale
    */
   grayscale?: boolean
-
   /**
-   * Source de l'image
+   * Source of the image
    */
-  source: ImageSourcePropType
+  source: any
 }

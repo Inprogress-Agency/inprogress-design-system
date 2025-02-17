@@ -8,7 +8,18 @@ module.exports = (async () => {
     resolver: {
       ...defaultConfig.resolver,
       assetExts: [...defaultConfig.resolver.assetExts],
-      sourceExts: [...defaultConfig.resolver.sourceExts],
+      sourceExts: [
+        ...defaultConfig.resolver.sourceExts,
+        'jsx',
+        'js',
+        'ts',
+        'tsx',
+        'json',
+        'web.js',
+        'web.jsx',
+        'web.ts',
+        'web.tsx',
+      ],
     },
   }
 })()
