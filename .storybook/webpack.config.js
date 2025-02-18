@@ -7,9 +7,14 @@ module.exports = ({ config }) => {
     alias: {
       ...config.resolve.alias,
       'react-native$': 'react-native-web',
+      'react-native-color-matrix-image-filters': 'react-native-web',
       'react/jsx-runtime': require.resolve('react/jsx-runtime'),
     },
-    extensions: ['*', '.web.js', '.js', '.jsx', '.tsx', '.ts'],
+    extensions: ['.web.js', '.web.tsx', '.web.ts', '.web.jsx', '.js', '.jsx', '.tsx', '.ts'],
+    fallback: {
+      ...config.resolve.fallback,
+      'react-native': 'react-native-web',
+    },
   }
 
   config.module.rules.push({
