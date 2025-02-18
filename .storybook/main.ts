@@ -15,7 +15,17 @@ const config: StorybookConfig = {
         'react-native$': 'react-native-web',
         'react-native-svg': 'react-native-svg-web',
       }
-      config.resolve.extensions = ['.tsx', '.ts', '.web.js', '.js', '.jsx', '.json', '.web.tsx']
+      config.resolve.extensions = [
+        '*',
+        '.tsx',
+        '.ts',
+        '.web.js',
+        '.js',
+        '.jsx',
+        '.json',
+        '.web.tsx',
+        '.web.ts',
+      ]
     }
 
     if (config.module?.rules) {

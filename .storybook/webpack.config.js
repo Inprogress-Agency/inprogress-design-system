@@ -11,7 +11,7 @@ module.exports = ({ config }) => {
       'react/jsx-runtime': require.resolve('react/jsx-runtime'),
       'react-native-linear-gradient': 'react-native-web-linear-gradient',
     },
-    extensions: ['.web.js', '.web.tsx', '.web.ts', '.web.jsx', '.js', '.jsx', '.tsx', '.ts'],
+    extensions: ['*', '.web.js', '.web.tsx', '.web.ts', '.web.jsx', '.js', '.jsx', '.tsx', '.ts'],
     fallback: {
       ...config.resolve.fallback,
       'react-native': 'react-native-web',

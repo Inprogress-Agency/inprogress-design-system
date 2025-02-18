@@ -44,4 +44,19 @@ export default {
       },
     },
   },
+  parametre: {
+    general: {
+      languages: {
+        insight: 'Languages',
+        title: 'Language selection',
+        subtitle: 'The selected language will be applied to the entire application.',
+        choice: {
+          fr: 'French',
+          en: 'English',
+          es: 'Spanish',
+        },
+        save: 'Save',
+      },
+    },
+  },
 }

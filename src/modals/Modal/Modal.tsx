@@ -6,7 +6,7 @@ import {
   BottomSheetView,
 } from '@gorhom/bottom-sheet'
 import React, { forwardRef, memo, useCallback, useMemo } from 'react'
-import { Dimensions, Platform, StyleSheet, View } from 'react-native'
+import { Dimensions, StyleSheet, View } from 'react-native'
 import { useReducedMotion } from 'react-native-reanimated'
 import { useSafeAreaInsets } from 'react-native-safe-area-context'
 import {

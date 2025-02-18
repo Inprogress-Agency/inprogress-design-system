@@ -1,2 +1,5 @@
 export { default as RedBadge } from './RedBadge/RedBadge'
 export { default as GrayscaleImage } from './GrayscaleImage/GrayscaleImage'
+export { default as OptionBloc } from './OptionBloc/OptionBloc'
+export { default as SelectOptions } from './SelectionOptions/SelectOptions'
+export { default as LanguageForm } from './LanguageForm/LanguageForm'

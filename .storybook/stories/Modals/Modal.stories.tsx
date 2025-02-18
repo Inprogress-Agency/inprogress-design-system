@@ -10,8 +10,8 @@ import { generateArgTypes } from '../../../utils/generateMeta/generateArgTypes'
 const meta: Meta<typeof Modal> = {
   title: 'Modals/Modal',
   component: Modal,
-  parameters: generateParameters(Modal),
-  argTypes: generateArgTypes(Modal),
+  // parameters: generateParameters(Modal),
+  // argTypes: generateArgTypes(Modal),
 }
 
 export default meta
@@ -20,7 +20,16 @@ export const Overview = () => {
   const ref = useRef<BottomSheetModal>(null)
   return (
     <>
-      <Button title="Press to show modal" onPress={() => ref.current?.present()} />
+      <Button
+        title="Press to show modal"
+        onPress={() => {
+          try {
+            ref.current?.present()
+          } catch (error) {
+            console.log(error)
+          }
+        }}
+      />
       <Modal
         ref={ref}
         actions={[{ title: 'Close', onPress: () => ref.current?.dismiss() }]}
