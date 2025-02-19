@@ -9,8 +9,20 @@ interface Option {
 }
 
 export interface SelectOptionsProps {
+  /**
+   * Value of the selected option
+   */
   value: string
+  /**
+   * Function called when the value of the selected option changes
+   */
   onChange: (value: string) => void
+  /**
+   * Options of the select
+   */
   options: Option[]
-  onSubmit: () => void
+  /**
+   * Function called when the form is submitted
+   */
+  onSubmit: (value?: string) => void
 }

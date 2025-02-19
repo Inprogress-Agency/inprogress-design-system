@@ -8,7 +8,8 @@ import LanguageForm from '../../others/LanguageForm/LanguageForm'
 const ModalSelectLanguages = ({ children: button, onSubmit }: ModalSelectLanguageProps) => {
   const ref = useRef<BottomSheetModal>(null)
 
-  const handleChange = (language?: string) => {
+  const handleSubmit = (language?: string) => {
+    console.log('language in modal', language)
     ref?.current?.dismiss?.()
     onSubmit(language)
   }
@@ -21,7 +22,7 @@ const ModalSelectLanguages = ({ children: button, onSubmit }: ModalSelectLanguag
         title={t('parametre.general.languages.title')}
         subtitle={t('parametre.general.languages.subtitle')}
       >
-        <LanguageForm onSubmit={handleChange} />
+        <LanguageForm onSubmit={handleSubmit} />
       </Modal>
     </>
   )

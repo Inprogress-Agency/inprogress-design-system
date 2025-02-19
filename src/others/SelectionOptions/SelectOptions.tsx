@@ -7,9 +7,13 @@ import { SettingsForm } from '../SettingsForm/SettingsForm'
 import OptionBloc from '../OptionBloc/OptionBloc'
 
 const SelectOptions = ({ value, onChange, options, onSubmit }: SelectOptionsProps) => {
+  console.log('value', value)
   const { t } = useTranslation()
   return (
-    <SettingsForm buttonLabel={t('parametre.general.languages.save')} onSubmit={onSubmit}>
+    <SettingsForm
+      buttonLabel={t('parametre.general.languages.save')}
+      onSubmit={() => onSubmit(value)}
+    >
       <StyledOptions>
         {options.map((option, index) => {
           return (
