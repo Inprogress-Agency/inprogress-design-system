@@ -1,4 +1,4 @@
-import { Colors, Theme } from './Theme.types'
+import { Colors, Theme } from '../../src/types/Theme'
 
 export const lightColors: Colors = {
   primary: '#5E43FF',
@@ -34,6 +34,11 @@ export const darkColors: Colors = {
 
 const theme: Theme = {
   colors: lightColors,
+  fonts: {
+    regular: 'Poppins-Regular',
+    semiBold: 'Poppins-SemiBold',
+    bold: 'Poppins-Bold',
+  },
   fontSize: {
     xxs: '10px',
     xs: '12px',

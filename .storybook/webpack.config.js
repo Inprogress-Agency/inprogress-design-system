@@ -8,6 +8,7 @@ module.exports = ({ config }) => {
       ...config.resolve.alias,
       'react-native$': 'react-native-web',
       'react-native-color-matrix-image-filters': 'react-native-web',
+      '@charmy.tech/react-native-stroke-text': 'react-native-web',
       'react/jsx-runtime': require.resolve('react/jsx-runtime'),
       'react-native-linear-gradient': 'react-native-web-linear-gradient',
     },
