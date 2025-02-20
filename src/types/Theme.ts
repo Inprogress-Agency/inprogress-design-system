@@ -16,6 +16,12 @@ export interface Colors {
   success: Color
 }
 
+export interface Fonts {
+  regular: string
+  semiBold: string
+  bold: string
+}
+
 export interface FontSize {
   xxs: string
   xs: string
@@ -89,6 +95,7 @@ export interface Layout {
 
 export interface Theme {
   colors: Colors
+  fonts: Fonts
   fontSize: FontSize
   fontWeight: FontWeight
   space: Space

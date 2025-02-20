@@ -6,7 +6,7 @@ export const StyledText = styled.Text`
   ${({ theme, color, regular, fontSize }: StyledTextProps) => css`
     ${Platform.OS === 'web'
       ? `font-weight: ${regular ? '400' : '600'};`
-      : `font-family: ${regular ? 'Poppins-Regular' : 'Poppins-SemiBold'};`}
+      : `font-family: ${regular ? theme.fonts.regular : theme.fonts.semiBold};`}
     color: ${color || theme.colors.black};
     font-size: ${fontSize}px;
   `}
