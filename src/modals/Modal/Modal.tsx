@@ -6,7 +6,7 @@ import {
   BottomSheetView,
 } from '@gorhom/bottom-sheet'
 import React, { forwardRef, memo, useCallback, useMemo } from 'react'
-import { Dimensions, Platform, StyleSheet, View } from 'react-native'
+import { Dimensions, Platform, ScrollView, StyleSheet, View } from 'react-native'
 import { useReducedMotion } from 'react-native-reanimated'
 import { useSafeAreaInsets } from 'react-native-safe-area-context'
 import {
@@ -24,6 +24,7 @@ import { LineClose } from '../../icons'
 import { HeaderProps, ModalProps } from './Modal.types'
 import { Button } from '../../buttons'
 import { dimensionsFallback } from '../../utils/dimensionsFallback'
+import { BottomSheetScrollViewProps } from '@gorhom/bottom-sheet/lib/typescript/components/bottomSheetScrollable/types'
 
 const Header = ({ header, onDismiss }: HeaderProps) => {
   const { theme } = useSelector((state: RootState) => state.theme)
@@ -40,6 +41,13 @@ const Header = ({ header, onDismiss }: HeaderProps) => {
 }
 
 const { height } = Dimensions.get('window') || dimensionsFallback
+
+const CustomBottomSheetScrollView = ({ children, ...props }: any) => {
+  if (Platform.OS === 'web') {
+    return <ScrollView {...props}>{children}</ScrollView>
+  }
+  return <BottomSheetScrollView {...props}>{children}</BottomSheetScrollView>
+}
 
 export const Modal = forwardRef(
   (
@@ -118,7 +126,7 @@ export const Modal = forwardRef(
         animateOnMount={!reducedMotion}
         {...props}
       >
-        <BottomSheetScrollView
+        <CustomBottomSheetScrollView
           scrollEnabled={scrollEnabled}
           keyboardShouldPersistTaps={keyboardShouldPersistTaps}
           showsVerticalScrollIndicator={false}
@@ -163,7 +171,7 @@ export const Modal = forwardRef(
               </View>
             )}
           </BottomSheetView>
-        </BottomSheetScrollView>
+        </CustomBottomSheetScrollView>
       </BottomSheetModal>
     )
   }

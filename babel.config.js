@@ -6,12 +6,12 @@ module.exports = {
     '@babel/preset-typescript',
   ],
   plugins: [
-    'react-native-reanimated/plugin',
     [
       '@babel/plugin-transform-react-jsx',
       {
         runtime: 'automatic',
       },
     ],
+    'react-native-reanimated/plugin',
   ],
 }

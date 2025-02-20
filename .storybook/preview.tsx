@@ -50,5 +50,4 @@ export const parameters = {
   docs: {
     theme: storybookTheme,
   },
-  viewMode: 'docs',
 }
