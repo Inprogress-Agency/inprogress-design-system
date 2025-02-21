@@ -1,6 +1,6 @@
-import type { Meta } from '@storybook/react'
+import type { Meta, StoryObj } from '@storybook/react'
 import { Select } from '../../../src/controls'
-import React, { useState } from 'react'
+import React from 'react'
 import { DefaultSelect } from '../../../src/controls/Select/Select'
 import { generateParameters } from '../../../utils/generateMeta/generateParameters'
 import { generateArgTypes } from '../../../utils/generateMeta/generateArgTypes'
@@ -14,20 +14,18 @@ const meta: Meta<typeof Select> = {
 
 export default meta
 
-export const Overview = () => {
-  const [selected, setSelected] = useState<string>('orange')
-  return (
-    <DefaultSelect
-      variant="primary"
-      title="Select a fruit"
-      placeholder="Select a fruit"
-      initialValue="orange"
-      options={[
-        { label: 'Orange', value: 'orange' },
-        { label: 'Apple', value: 'apple' },
-        { label: 'Banana', value: 'banana' },
-      ]}
-      onChange={setSelected}
-    />
-  )
+export const Overview: StoryObj<typeof DefaultSelect> = {
+  args: {
+    title: 'Select a fruit',
+    initialValue: 'orange',
+    options: [
+      { label: 'Orange', value: 'orange' },
+      { label: 'Apple', value: 'apple' },
+      { label: 'Banana', value: 'banana' },
+    ],
+    onChange: () => null,
+  },
+  render: args => {
+    return <DefaultSelect {...args} />
+  },
 }

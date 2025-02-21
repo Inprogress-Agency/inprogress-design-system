@@ -2,6 +2,8 @@ import type { Meta, StoryObj } from '@storybook/react'
 import { CheckBox } from '../../../src/controls'
 import { generateArgTypes } from '../../../utils/generateMeta/generateArgTypes'
 import { generateParameters } from '../../../utils/generateMeta/generateParameters'
+import { useArgs } from '@storybook/preview-api'
+import React from 'react'
 
 const meta: Meta<typeof CheckBox> = {
   title: 'Controls/CheckBox',
@@ -14,7 +16,15 @@ export default meta
 
 export const Overview: StoryObj<typeof CheckBox> = {
   args: {
-    value: true,
-    onValueChange: () => {},
+    value: false,
+  },
+  render: args => {
+    const [, setArgs] = useArgs()
+
+    const onValueChange = (value: boolean) => {
+      setArgs({ value })
+    }
+
+    return <CheckBox {...args} onValueChange={onValueChange} />
   },
 }

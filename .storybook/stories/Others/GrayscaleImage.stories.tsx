@@ -12,9 +12,7 @@ const meta: Meta<typeof GrayscaleImage> = {
 
 export default meta
 
-type Story = StoryObj<typeof GrayscaleImage>
-
-export const Overview: Story = {
+export const Overview: StoryObj<typeof GrayscaleImage> = {
   args: {
     source: { uri: 'https://picsum.photos/300' },
     grayscale: true,

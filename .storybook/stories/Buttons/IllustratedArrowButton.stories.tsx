@@ -3,6 +3,7 @@ import { IllustratedArrowButton } from '../../../src/buttons'
 import { Text } from '../../../src/texts'
 import { generateParameters } from '../../../utils/generateMeta/generateParameters'
 import { generateArgTypes } from '../../../utils/generateMeta/generateArgTypes'
+import React from 'react'
 
 const meta: Meta<typeof IllustratedArrowButton> = {
   title: 'Buttons/IllustratedArrowButton',
@@ -16,6 +17,6 @@ export default meta
 export const Overview: StoryObj<typeof IllustratedArrowButton> = {
   args: {
     image: { uri: 'https://inprogress.agency/logo.png' },
-    content: <Text>Contenu</Text>,
+    content: <Text>Content</Text>,
   },
 }

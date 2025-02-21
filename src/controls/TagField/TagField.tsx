@@ -87,6 +87,8 @@ const TagField = ({ tags = [], onChange, ...props }: TagFieldProps) => {
     [tags, onChange, value, t]
   )
 
+  console.log(value)
+
   const handleRemove = (tag: string) => {
     onChange(tags.filter(item => item !== tag))
   }

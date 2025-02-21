@@ -3,6 +3,8 @@ import { IconSwitch } from '../../../src/controls'
 import { LineTwoUsers, LineUser } from '../../../src/icons'
 import { generateParameters } from '../../../utils/generateMeta/generateParameters'
 import { generateArgTypes } from '../../../utils/generateMeta/generateArgTypes'
+import { useArgs } from '@storybook/preview-api'
+import React from 'react'
 
 const meta: Meta<typeof IconSwitch> = {
   title: 'Controls/IconSwitch',
@@ -26,5 +28,20 @@ export const Overview: StoryObj<typeof IconSwitch> = {
       icon: LineTwoUsers,
       action: () => {},
     },
+  },
+  render: args => {
+    const [, setArgs] = useArgs()
+    const formattedArgs = {
+      ...args,
+      left: {
+        ...args.left,
+        action: () => setArgs({ value: 'solo' }),
+      },
+      right: {
+        ...args.right,
+        action: () => setArgs({ value: 'multi' }),
+      },
+    }
+    return <IconSwitch {...formattedArgs} />
   },
 }
