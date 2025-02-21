@@ -1,8 +1,8 @@
 import { BottomSheetTextInputProps } from '@gorhom/bottom-sheet/lib/typescript/components/bottomSheetTextInput'
-import { TextInputProps } from 'react-native'
 import { StyledComponentProps } from '../../types/StyledComponent'
+import { TextInputProps } from '../TextInput/TextInput.types'
 
-export interface TextAreaProps {
+export interface TextAreaProps extends TextInputProps {
   /**
    * Text to display in the text area
    */

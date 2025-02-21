@@ -4,6 +4,7 @@ import { LineShoppingCart } from '../../../src/icons'
 import React, { useState } from 'react'
 import { generateParameters } from '../../../utils/generateMeta/generateParameters'
 import { generateArgTypes } from '../../../utils/generateMeta/generateArgTypes'
+import { useArgs } from '@storybook/preview-api'
 
 const meta: Meta<typeof Slider> = {
   title: 'Controls/Slider',
@@ -17,6 +18,16 @@ export default meta
 export const Overview: StoryObj<typeof Slider> = {
   args: {
     value: 0,
+    minimumValue: 0,
+    maximumValue: 100,
+    step: 1,
+  },
+  render: args => {
+    const [, setArgs] = useArgs()
+    const onChange = (value: number[]) => {
+      setArgs({ value: value[0] })
+    }
+    return <Slider {...args} onValueChange={onChange} />
   },
 }
 

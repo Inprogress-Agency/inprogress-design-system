@@ -4,6 +4,7 @@ import { LineEdit3 } from '../../../src/icons'
 import React from 'react'
 import { generateArgTypes } from '../../../utils/generateMeta/generateArgTypes'
 import { generateParameters } from '../../../utils/generateMeta/generateParameters'
+import { useArgs } from 'storybook/internal/preview-api'
 
 const meta: Meta<typeof LabeledInput> = {
   title: 'Controls/LabeledInput',
@@ -16,12 +17,13 @@ export default meta
 
 export const Overview: StoryObj<typeof LabeledInput> = {
   args: {
-    title: 'Champ de texte',
+    title: 'Label',
     labelProps: {
       optional: true,
     },
     inputProps: {
-      placeholder: 'Entrez votre texte',
+      value: '',
+      placeholder: 'Enter your text here',
     },
     children: <LineEdit3 />,
   },

@@ -6,5 +6,8 @@ export interface StyledKeyProps extends StyledComponentProps {
 }
 
 export interface KeyProps extends TouchableOpacityProps {
+  /**
+   * The height of the parent container
+   */
   height: number
 }

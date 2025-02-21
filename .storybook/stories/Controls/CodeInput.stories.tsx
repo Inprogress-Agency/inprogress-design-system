@@ -1,21 +1,28 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import { CodeInput } from '../../../src/controls'
-import React, { useState } from 'react'
+import React from 'react'
+import { useArgs } from '@storybook/preview-api'
+import { generateArgTypes } from '../../../utils/generateMeta/generateArgTypes'
+import { generateParameters } from '../../../utils/generateMeta/generateParameters'
 
 const meta: Meta<typeof CodeInput> = {
   title: 'Controls/CodeInput',
   component: CodeInput,
+  argTypes: generateArgTypes(CodeInput),
+  parameters: generateParameters(CodeInput),
 }
 
 export default meta
-type Story = StoryObj<typeof CodeInput>
-export const Overview: Story = {
+
+export const Overview: StoryObj<typeof CodeInput> = {
   args: {
     code: '',
   },
-}
-
-export const CodeInputWithCode = () => {
-  const [code, setCode] = useState('')
-  return <CodeInput code={code} onChange={setCode} />
+  render: args => {
+    const [, setArgs] = useArgs()
+    const onChange = (code: string) => {
+      setArgs({ code })
+    }
+    return <CodeInput {...args} onChange={onChange} />
+  },
 }
