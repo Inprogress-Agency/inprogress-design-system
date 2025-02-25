@@ -1,9 +1,13 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import { SettingBloc  } from '../../../src/others'
+import { generateArgTypes } from '../../../utils/generateMeta/generateArgTypes';
+import { generateParameters } from '../../../utils/generateMeta/generateParameters';
 
 const meta: Meta<typeof SettingBloc> = {
   title: 'Others/SettingBloc',
   component: SettingBloc,
+    parameters: generateParameters(SettingBloc),
+    argTypes: generateArgTypes(SettingBloc),
 }
 
 export default meta

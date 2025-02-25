@@ -2,7 +2,7 @@ import { TouchableOpacityProps } from 'react-native'
 import { StyledComponentProps } from '../../types/StyledComponent'
 import { DefaultTheme } from 'styled-components'
 
-export interface SettingOptionProps extends TouchableOpacityProps {
+export interface SettingOptionProps {
   text: string
   subText?: string
   icon?: React.ReactNode
@@ -20,7 +20,7 @@ export interface SettingButtonOptionProps extends SettingOptionProps {
 }
 
 
-export interface SettingButtonProps extends StyledComponentProps {
+export interface SettingButtonProps {
   title?: string
   options: SettingButtonOptionProps[]
   informationText?: string
@@ -28,17 +28,17 @@ export interface SettingButtonProps extends StyledComponentProps {
 }
 
 
-export interface DefaultWrapperProps  {
-  theme?: DefaultTheme
+
+export interface DefaultWrapperProps {
   children: (ref: any) => React.ReactNode
 }
 
 
-export interface SettingsStyleProps extends StyledComponentProps {
+export interface StyledSettingsProps extends StyledComponentProps {
   marginBottom?: boolean
 }
 
-export interface OptionStyleProps extends StyledComponentProps {
+export interface StyledOptionProps extends StyledComponentProps {
   lastChild?: boolean
   disabled?: boolean
   bgDisabled?: boolean
