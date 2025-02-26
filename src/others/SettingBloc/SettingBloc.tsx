@@ -4,7 +4,7 @@ import { View } from 'react-native'
 
 import {
   SettingButtonProps,
-  SettingOptionProps,
+  StyledOptionProps,
   DefaultWrapperProps
 } from './SettingBloc.types'
 
@@ -34,7 +34,7 @@ const SettingOption = ({
   lastChild,
   disabled,
   label,
-}: SettingOptionProps) => {
+}: StyledOptionProps) => {
   return (
     <StyledOption onPress={onPress} lastChild={lastChild} disabled={disabled}>
       <StyledIcon>{icon}</StyledIcon>

@@ -3,15 +3,15 @@ import { Text, TouchableOpacity, View } from 'react-native'
 import { StyledComponentProps } from '../../types/StyledComponent'
 
 import {
-  SettingsStyleProps,
-  OptionStyleProps
+  StyledSettingsProps,
+  StyledOptionProps
 } from './SettingBloc.types'
 
 
 
 
 export const StyledSettings = styled.View`
-  ${({ theme, marginBottom }: SettingsStyleProps) => css`
+  ${({ theme, marginBottom }: StyledSettingsProps) => css`
     margin-bottom: ${marginBottom ? theme.space.xs : theme.space.l};
   `}
 `
@@ -32,7 +32,7 @@ export const StyledTitle = styled(Text)`
 
 
 export const StyledOptions = styled.View`
-  ${({ theme, bgDisabled }:OptionStyleProps) => css`
+  ${({ theme, bgDisabled }:StyledOptionProps) => css`
     background: ${!bgDisabled ? theme.colors.secondary : theme.colors.white};
     border-radius: ${theme.borderRadius.l};
     padding: ${theme.space.none} ${theme.space.std};
@@ -41,10 +41,8 @@ export const StyledOptions = styled.View`
 
 
 export const StyledWrapperInformation = styled.View`
-  ${({ theme }:StyledComponentProps ) => css`
-    margin-top: 10px;
-    padding: 0px 16px;
-  `}
+ margin-top: 10px;  
+ padding: 0px 16px; 
 `
 
 
@@ -108,7 +106,7 @@ export const StyledOptionSubText = styled(Text)`
 
 
 export const StyledOption = styled(TouchableOpacity)`
-  ${({ theme, lastChild, disabled }: OptionStyleProps) => css`
+  ${({ theme, lastChild, disabled }: StyledOptionProps) => css`
     border-bottom-color: rgba(142, 142, 149, 0.1);
     border-bottom-width: ${lastChild ? '0px' : '1px'};
     height: ${theme.space.xxl3};

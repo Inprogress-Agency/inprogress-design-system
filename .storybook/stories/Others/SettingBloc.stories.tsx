@@ -2,6 +2,8 @@ import type { Meta, StoryObj } from '@storybook/react'
 import { SettingBloc  } from '../../../src/others'
 import { generateArgTypes } from '../../../utils/generateMeta/generateArgTypes';
 import { generateParameters } from '../../../utils/generateMeta/generateParameters';
+import { LineEdit, LineSetting } from '../../../src/icons'
+import React from 'react';
 
 const meta: Meta<typeof SettingBloc> = {
   title: 'Others/SettingBloc',
@@ -20,7 +22,7 @@ export const Overview: Story = {
       {
         text: 'Option 1',
         subText: 'Subtext for option 1',
-        icon: '🔧',
+        icon: <LineEdit />,
         onPress: () => alert('Option 1 pressed'),
         toggle: null,
         iconArrow: true,
@@ -31,7 +33,7 @@ export const Overview: Story = {
       {
         text: 'Option 2',
         subText: 'Subtext for option 2',
-        icon: '⚙️',
+        icon: <LineSetting />,
         onPress: () => alert('Option 2 pressed'),
         iconArrow: true,
         lastChild: true,
