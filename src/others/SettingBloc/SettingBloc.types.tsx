@@ -1,9 +1,10 @@
 import { StyledComponentProps } from '../../types/StyledComponent'
+import { IconComponent } from '../../types/Icon'
 
-export interface StyledOptionProps {
+export interface SettingOptionProps {
   text: string
-  subText?: string
-  icon?: React.ReactNode
+  subText: string
+  icon: IconComponent
   onPress?: (ref?: any) => void
   toggle?: React.ReactNode
   iconArrow?: boolean
@@ -12,15 +13,20 @@ export interface StyledOptionProps {
   label?: string
 }
 
-export interface SettingButtonOptionProps extends StyledOptionProps{
-  parent?: React.ComponentType<{ uri?: string; children: (ref: any) => React.ReactNode }>
+interface ParentProps {
+  uri?:string
+  children: (ref: any) => React.ReactNode
+}
+
+export interface Option extends SettingOptionProps{
+  parent?: React.FC<ParentProps>
   uri?: string
 }
 
 
 export interface SettingButtonProps  {
   title?: string
-  options: SettingButtonOptionProps[]
+  options: Option[]
   informationText?: string
   bgDisabled?: boolean
 }
@@ -34,8 +40,11 @@ export interface StyledSettingsProps extends StyledComponentProps {
   marginBottom?: boolean
 }
 
-export interface StyledOptionProps extends StyledComponentProps {
+export interface StyledOptionProps extends StyledComponentProps  {
+  bgDisabled?: boolean
   lastChild?: boolean
   disabled?: boolean
+}
+export interface StyledOptionsProps extends StyledComponentProps  {
   bgDisabled?: boolean
 }

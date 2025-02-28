@@ -2,10 +2,11 @@ import { LineArrowRight } from '../../icons'
 import React from 'react'
 import { View } from 'react-native'
 
+
 import {
   SettingButtonProps,
-  StyledOptionProps,
-  DefaultWrapperProps
+  DefaultWrapperProps,
+  SettingOptionProps
 } from './SettingBloc.types'
 
 import {
@@ -27,17 +28,20 @@ import {
 const SettingOption = ({
   text,
   subText,
-  icon,
+  icon: Icon,
   onPress,
   toggle,
   iconArrow,
   lastChild,
   disabled,
   label,
-}: StyledOptionProps) => {
+  
+}: SettingOptionProps) => {
   return (
     <StyledOption onPress={onPress} lastChild={lastChild} disabled={disabled}>
-      <StyledIcon>{icon}</StyledIcon>
+      <StyledIcon>
+        <Icon />
+      </StyledIcon>
       <StyledWrapperTextIcon>
         <View>
           <StyledOptionText>{text}</StyledOptionText>
@@ -65,20 +69,27 @@ const SettingButton = ({
 }: SettingButtonProps) => {
 
   return (
-    <StyledSettings marginBottom={!!options[0]?.subText}>
+    <StyledSettings marginBottom={options[0].subText}> 
       {title && <StyledTitle>{title}</StyledTitle>}
 
       <StyledOptions bgDisabled={bgDisabled}>
         {options?.map(
           (
-            { text, parent: Parent = DefaultWrapper, onPress, uri, ...props },
+            { text,icon: Icon, subText, parent: Parent = DefaultWrapper, onPress, uri, ...props },
             index,
           ) => (
             <Parent key={text} uri={uri} >
               {ref => (
                 <SettingOption
                   text={text}
+                  subText={subText}  
+                  icon={Icon} 
                   lastChild={options.length === index + 1}
+                  onPress={() => {
+                    if (onPress) {
+                      ref ? onPress(ref) : onPress();
+                    }
+                  }}
                   {...props}
                 />
               )}

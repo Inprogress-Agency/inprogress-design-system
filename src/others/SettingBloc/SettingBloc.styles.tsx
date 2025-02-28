@@ -1,10 +1,12 @@
 import styled, { css } from 'styled-components/native'
-import { Text, TouchableOpacity, View } from 'react-native'
+import {  TouchableOpacity, View } from 'react-native'
 import { StyledComponentProps } from '../../types/StyledComponent'
+import { Text } from '../../../src/texts'
 
 import {
   StyledSettingsProps,
-  StyledOptionProps
+  StyledOptionProps,
+  StyledOptionsProps
 } from './SettingBloc.types'
 
 
@@ -32,7 +34,7 @@ export const StyledTitle = styled(Text)`
 
 
 export const StyledOptions = styled.View`
-  ${({ theme, bgDisabled }:StyledOptionProps) => css`
+  ${({ theme, bgDisabled }:StyledOptionsProps) => css`
     background: ${!bgDisabled ? theme.colors.secondary : theme.colors.white};
     border-radius: ${theme.borderRadius.l};
     padding: ${theme.space.none} ${theme.space.std};
