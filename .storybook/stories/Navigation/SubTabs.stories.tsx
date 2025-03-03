@@ -1,9 +1,11 @@
+import React from 'react'
 import type { Meta, StoryObj } from '@storybook/react'
 import { generateParameters } from '../../../utils/generateMeta/generateParameters'
 import { generateArgTypes } from '../../../utils/generateMeta/generateArgTypes'
 import { Subtabs } from '../../../src/navigation'
-import { Text } from 'react-native'
 import { LineHome } from '../../../src/icons'
+import { useArgs } from 'storybook/internal/preview-api'
+import { TabItem } from '../../../src/navigation/SubTabs/SubTabs.types'
 
 const meta: Meta<typeof Subtabs> = {
   title: 'Navigation/SubTabs',
@@ -24,5 +26,14 @@ export const Overview: StoryObj<typeof Subtabs> = {
     selectedTab: { name: 'tab1', label: 'Tab 1', }, 
     setSelectedTab: (tab) => console.log('Tab selected:', tab), 
     children: "Label", 
+  },
+  render: args => {
+    const [ , setArgs] = useArgs()
+    const setSelectedTab = (value: TabItem) => {
+      args.setSelectedTab(value)
+      setArgs({ selectedTab : value })
+    }
+
+    return <Subtabs {...args} setSelectedTab={setSelectedTab} />
   },
 }
