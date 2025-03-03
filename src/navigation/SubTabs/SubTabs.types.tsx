@@ -12,6 +12,7 @@ export interface SubTabsProps extends StyledComponentProps {
   selectedTab: TabItem
   setSelectedTab: (tab: TabItem) => void
   children?: ReactNode
+  
 }
 
 export interface TabButtonProps extends StyledComponentProps {

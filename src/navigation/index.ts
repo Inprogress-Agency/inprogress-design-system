@@ -3,3 +3,4 @@ export { default as AuthTopNavigationBar } from './AuthTopNavigationBar/AuthTopN
 export { default as TabBarButton } from './TabBarButton/TabBarButton'
 export { default as TabBar } from './TabBar/TabBar'
 export { default as TabNavigator } from './TabNavigator/TabNavigator'
+export { default as Subtabs } from './SubTabs/SubTabs'

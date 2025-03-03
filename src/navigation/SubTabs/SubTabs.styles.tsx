@@ -11,11 +11,12 @@ export const StyledTabButton = styled(TouchableOpacity)`
     min-width: 48px;
     justify-content: center;
     align-items: center;
-    opacity: ${props => (props.disabled ? 0.6 : 1)};
+    opacity: ${disabled ? 0.6 : 1}; 
     flex-direction: row;
     gap: ${theme.space.xxs};
   `}
 `
+
 
 export const StyledTabText = styled(Text)`
   ${({ theme, selected }: TabTextProps) => css`

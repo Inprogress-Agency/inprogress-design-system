@@ -2,7 +2,8 @@ import React from 'react'
 
 import { StyledTabButton, StyledTabText } from './SubTabs.styles'
 import { TabItem, SubTabsProps } from './SubTabs.types'
-import { ScrollView } from 'react-native-gesture-handler'
+import { GradientScrollView } from '../../layout'
+
 
 const Subtabs: React.FC<SubTabsProps> = ({
   tabs,
@@ -13,7 +14,7 @@ const Subtabs: React.FC<SubTabsProps> = ({
   if (!tabs) return null
 
   return (
-    <ScrollView horizontal fade className="pb-4 flex flex-row">
+    <GradientScrollView horizontal fade style={{ paddingBottom: 16, flexDirection: 'row' }}>
       {tabs.map((tab: TabItem, index: number) => {
         const isSelected = selectedTab?.name === tab.name
 
@@ -30,7 +31,7 @@ const Subtabs: React.FC<SubTabsProps> = ({
         )
       })}
       {children}
-    </ScrollView>
+    </GradientScrollView>
   )
 }
 
