@@ -13,3 +13,14 @@ export interface SubTabsProps extends StyledComponentProps {
   setSelectedTab: (tab: TabItem) => void
   children?: ReactNode
 }
+
+export interface TabButtonProps extends StyledComponentProps {
+  selected: boolean
+  last: boolean
+  disabled?: boolean
+}
+
+export interface TabTextProps extends StyledComponentProps{
+  selected: boolean
+}
+

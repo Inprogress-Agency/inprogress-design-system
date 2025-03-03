@@ -1,10 +1,9 @@
 import styled, { css } from 'styled-components/native'
 import { Text, TouchableOpacity } from 'react-native'
-import { StyledComponentProps } from '../../types/StyledComponent'
-
+import { TabButtonProps, TabTextProps } from './SubTabs.types'
 
 export const StyledTabButton = styled(TouchableOpacity)`
-  ${({ theme, last, selected }: SubTabsProps) => css`
+  ${({ theme, last, selected, disabled }: TabButtonProps) => css`
     padding: ${theme.space.xs} ${theme.space.std};
     border-radius: ${theme.borderRadius.m};
     border: 1px solid ${selected ? theme.colors.primary : theme.colors.grey1};
@@ -19,7 +18,7 @@ export const StyledTabButton = styled(TouchableOpacity)`
 `
 
 export const StyledTabText = styled(Text)`
-  ${({ theme, selected }: StyledComponentProps) => css`
+  ${({ theme, selected }: TabTextProps) => css`
     color: ${selected ? theme.colors.black : theme.colors.grey2};
     font-size: 14px;
   `}

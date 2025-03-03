@@ -1,8 +1,8 @@
-// SubTabs.tsx
 import React from 'react'
-import ScrollView from 'react-native'
+
 import { StyledTabButton, StyledTabText } from './SubTabs.styles'
 import { TabItem, SubTabsProps } from './SubTabs.types'
+import { ScrollView } from 'react-native-gesture-handler'
 
 const Subtabs: React.FC<SubTabsProps> = ({
   tabs,
