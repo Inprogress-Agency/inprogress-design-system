@@ -25,7 +25,6 @@ export const Overview: StoryObj<typeof Subtabs> = {
     ],
     selectedTab: { name: 'tab1', label: 'Tab 1', }, 
     setSelectedTab: (tab) => console.log('Tab selected:', tab), 
-    children: "Label", 
   },
   render: args => {
     const [ , setArgs] = useArgs()
