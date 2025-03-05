@@ -1,8 +1,15 @@
 import styled, { css } from 'styled-components/native'
-import { Text, TouchableOpacity } from 'react-native'
+import { StyleSheet, Text } from 'react-native'
 import { TabButtonProps, TabTextProps } from './SubTabs.types'
 
-export const StyledTabButton = styled(TouchableOpacity)`
+export const Scrollview = StyleSheet.create({
+  scrollView: {
+    paddingBottom: 16,
+    flexDirection: 'row',
+  },
+});
+
+export const StyledTabButton = styled.TouchableOpacity`
   ${({ theme, last, selected, disabled }: TabButtonProps) => css`
     padding: ${theme.space.xs} ${theme.space.std};
     border-radius: ${theme.borderRadius.m};
