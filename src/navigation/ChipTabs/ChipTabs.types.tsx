@@ -13,12 +13,13 @@ export interface StickyTabsWrapperProps {
 }
 
 export interface TabType {
-  name?: string
-  label?: string
+  name: string
+  label: string
   icon?: ReactNode
   count?: number
   sticky?: boolean
   disabled?: boolean
+  useDisplayBadge?: () => boolean
 }
 
 export interface TabProps {
@@ -34,7 +35,7 @@ export interface ChipTabsProps extends StyledComponentProps{
   selectedTab: TabType
   setSelectedTab: (tab: TabType) => void
   children?: ReactNode
-  tabWrapper: boolean
+  tabWrapper?: React.ComponentType<{ tabName?: string, children?: React.ReactNode }>
 }
 
 export interface FilteredChipTabsProps extends ChipTabsProps {
@@ -52,11 +53,28 @@ export interface TextOrIconTabProps extends StyledComponentProps {
   selected?: boolean
 }
 
+export interface StyledTabIconProps extends StyledComponentProps {
+  selected: boolean
+}
+
+export interface StyledTabMarginContainerProps extends StyledComponentProps {
+  isLast: boolean
+}
+
+export interface StyledNormalTabsProps extends StyledComponentProps {
+  width: number
+}
+
 export interface StyledTabButtonProps extends StyledComponentProps{
   selected?: boolean;
   disabled?: boolean;
   last?: boolean;
   theme: any; 
+}
+
+export interface StyledTabTextProps extends StyledComponentProps {
+  selected?: boolean;
+  theme: any;
 }
 
 
